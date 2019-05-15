@@ -183,11 +183,16 @@ class Tutorial {
     
     public static void main(String args[]) {
        
-        int num=0;
+        int num=0; 
+        int num1=5
 
-        while(num < 5) //<- 반복 조건
+        while(num < 5) //<- 반복 조건 true 일시 반복 실행
         { System.out.println("I like Java"+num);
           num++; // <- 반복 조건을 무너뜨리는 조건. 반드시 들어가야됨. 아니면 무한정 반복됨.
+        }
+        while(num1 < 5) // 반복 조건 false 일시 실행 안됨
+        { System.out.println("I like Java"+num1);
+          num1++; 
         }
         
     }
@@ -195,3 +200,30 @@ class Tutorial {
 }
  
 ```
+## do~while 문
+
+```java
+class Tutorial {
+    
+    public static void main(String args[]) {
+       
+        int num=0;
+        int num1=5;
+
+        do    // <- 먼저 실행  
+        { System.out.println("I like Java"+num);
+          num++; 
+        }while(num < 5); // <-true 일 경우 반복됨.
+        
+        do{     // 먼저 실행  
+            System.out.println("I like Java"+num);
+            num1++;
+        }while(num1<5); // <- false 일 경우 실행 안됨.
+        
+    }
+    
+}
+ 
+```
+**while 문 -> 검사,실행 순서
+**do~while 문 -> 실행,검사 
