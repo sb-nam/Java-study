@@ -176,3 +176,22 @@ class Tutorial {
 }
  
 ```
+## while 문
+
+```java
+class Tutorial {
+    
+    public static void main(String args[]) {
+       
+        int num=0;
+
+        while(num < 5) //<- 반복 조건
+        { System.out.println("I like Java"+num);
+          num++; // <- 반복 조건을 무너뜨리는 조건. 반드시 들어가야됨. 아니면 무한정 반복됨.
+        }
+        
+    }
+    
+}
+ 
+```
