@@ -89,4 +89,64 @@ class Tutorial {
 }
   
 ```
+## switch 와 break 문
 
+```java
+class Tutorial {
+    
+    public static void main(String args[]) {
+       
+        
+        int n=1; // n1= case 1, n2= case 2, n3= case 3 , 그외= deault
+
+        switch(n){
+            case 1 :
+                System.out.println("Simple Java");
+
+            case 2 :
+                System.out.println("Funny Java");
+                
+            case 3 :
+                System.out.println("Fantastic Java");
+                
+
+            default :
+                System.out.println("The best programming language");
+        }
+
+        System.out.println("Do you like coffee?");
+    }
+    
+}
+**switch = 순차적으로 모두 실행  
+```
+
+```java
+class Tutorial {
+    
+    public static void main(String args[]) {
+       
+        
+        int n=1; // n1= case 1, n2= case 2, n3= case 3 , 그외= deault
+
+        switch(n){
+            case 1 :
+                System.out.println("Simple Java");
+                break;
+            case 2 :
+                System.out.println("Funny Java");
+                break;
+            case 3 :
+                System.out.println("Fantastic Java");
+                break;
+
+            default :
+                System.out.println("The best programming language");
+        }
+
+        System.out.println("Do you like coffee?");
+    }
+    
+}
+  **break = 해당 영역만 실행
+```
