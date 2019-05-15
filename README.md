@@ -150,3 +150,29 @@ class Tutorial {
 }
   **break = 해당 영역만 실행
 ```
+```java
+class Tutorial {
+    
+    public static void main(String args[]) {
+       
+        
+        int n=1;
+
+        switch(n){
+            case 1 : case 2 : case 3 :                // n 1,2,3 을 하나의 부류로 묶을수도 있다.
+                System.out.println("Simple Java");
+                break;
+            case 4 :  case 5 :                        // n 4,5 를 하나의 부류로 묶을수 있다.
+                System.out.println("Fantastic Java");
+                break;
+
+            default :
+                System.out.println("The best programming language");
+        }
+
+        System.out.println("Do you like coffee?");
+    }
+    
+}
+ 
+```
