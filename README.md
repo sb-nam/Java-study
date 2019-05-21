@@ -365,3 +365,28 @@ class Tutorial {
 
  i가 0일때 j=0,1,2 . i가 1일때 j=0,1,2 . i가 2일때 j=0,1,2 로 진행된다.
 ```
+## break 레이블
+```java
+class Tutorial {
+    
+    public static void main(String args[]) {
+       
+        outerLoop :    // <- 반복문의 조건을 설정 해놓고 반복문을 빠져나가고 싶을때 사용.
+        for(int i=1; i<10; i ++){
+
+            for(int j=1; j<10; j++){
+
+                System.out.println("[" + i + "," + j + "]");
+                if(i % 2 == 0 && j % 2 == 0){
+                    break outerLoop; // 브레이크 레이블 범위 표시
+                }
+            }
+        }
+
+        
+    }
+    
+}
+**** break; 만 사용 하게 된다면 하나의 반복문만 나가게 됨.
+
+```
