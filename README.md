@@ -483,4 +483,37 @@ class Tutorial {
  
 ```
 
+## 키워드  return이 지니는 두가지 의미
+- 값의 반환
+- 메소드의 종료
+
+```java
+class Tutorial {
+   
+     public static void main(String args[]) {
+       
+        divide(4,2);
+        divide(6,2);
+        divide(9,0);
+    }
+
+    public static void divide(int num1, int num2 ){
+
+        if(num2==0){
+
+            System.out.println("0으로는 값을 나눌 수 없습니다.");
+            return;  // <- 메소들르 종료 하겠다는 의미.
+         // void 이기 때문에 값을 반환하면 안되고 num2가 0이라면 내용 출력후 메소드가 종료됨.
+        }            
+
+        System.out.println("나눗셈 결과 :" + (num1 / num2));
+    
+    
+    }
+    
+}
+  
+ 
+```
+
 
