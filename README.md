@@ -393,3 +393,31 @@ class Tutorial {
 ## 메소드에 대한 이해와 메소드의 정의
 
 - **자바 프로그램의 시작은 main이라는 이름의 메소드를 실행하는 데서부터 시작한다.
+- 메소드는 한번 정의되면 여러 번 실행 가능하다.
+- 메소드의 정의에서 메소드의 이름 오른편에 등장하는 변수를 '매개변수' 라고 한다.
+- `매개변수` 는 메소드 호출 시 전달되는 값의 저장을 위한 용도로 사용 된다.
+- 메소드 호출시 전달되는 값의 자료형과 '매개변수' 의 자료형은 항상 일치해야 한다.
+- **메소드가 정의되는 위치는 프로그램에 영향을 미치지 않는다.
+```java
+class Tutorial {
+    
+    public static void main(String args[]) {
+       
+       System.out.println("program start");
+       hiEveryone(12); // 메소드 
+       hiEveryone(13); // 호출 방법
+       System.out.println("program end");
+    }
+
+    public static void hiEveryone(int age){ // <- int age 매개 변수
+
+        System.out.println("good morning");
+        System.out.println("I am "+ age + "years old");
+        
+
+        
+    }
+    
+}
+ 
+```
