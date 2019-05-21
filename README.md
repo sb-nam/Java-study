@@ -340,3 +340,28 @@ class Tutorial {
 while문은 정상 출력이 되는대 for문은 왜 출력이 안되는지 모르겠다. 좀 더 고민해 봐야지.
  
 ```
+## 반복문의 중첩
+- 가장 많이 등장하는 중첩은 for문의 중첩!
+
+```java
+class Tutorial {
+    
+    public static void main(String args[]) {
+       
+         for(int i=0; i<3; i++){    // <- 조건 1번 만족
+                                        //     V
+           System.out.println("i="+i);  //     V
+                                        //     V
+           for(int j=0; j<3; j++){  // <- 조건 모두 만족
+              
+              System.out.println("j="+j);
+           }
+       }
+
+        
+    }
+    
+}
+
+ i가 0일때 j=0,1,2 . i가 1일때 j=0,1,2 . i가 2일때 j=0,1,2 로 진행된다.
+```
