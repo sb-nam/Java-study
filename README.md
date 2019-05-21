@@ -307,3 +307,36 @@ class Tutorial {
 }
  
 ```
+while 문을 for 문으로 변경2
+```java
+class Tutorial {
+    
+    public static void main(String args[]) {
+         
+         int num=1;
+
+        while(true){
+
+            if(num % 6 == 0 && num % 14 == 0){
+                break;
+            }
+            num++;
+        }
+        System.out.println(num);
+
+//       for(int num=1; true; num++){
+//
+//           if(num % 6 == 0 && num % 14 == 0){
+//               break;
+//           }
+//           num++;
+//       }
+//        System.out.println(num);   <- 왜 출력이안되는 거지?
+
+        
+    }
+    
+}
+while문은 정상 출력이 되는대 for문은 왜 출력이 안되는지 모르겠다. 좀 더 고민해 봐야지.
+ 
+```
