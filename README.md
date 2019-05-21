@@ -256,3 +256,54 @@ class Tutorial {
 for 문은 위와 같이 while문과 같은 형식을 취한다. 또한 실행 순서도 while문과 비슷한 순서로 진행함을 알아 두자!
  
 ```
+## continue & break
+
+```java
+class Tutorial {
+    
+    public static void main(String args[]) {
+       
+        int num=0;
+        int count=0;
+
+        while(num++<100){
+
+            if(num % 5 != 0 || num % 7 != 0){ // <- 5의 배수가 아니고, 7의 배수도 아닐때.if문 특성상 true일때 다음으로 진행됨.
+                continue;         // <- 다음으로 진행 하지 않고 while 문을 다시 실행한다는 의미.
+            }
+            count++;              // <- 5의 배수이며 7의 배수 일 때만 count++ 하겠다.
+            System.out.println(num);  // <- 35,70
+        }
+        System.out.println("count="+ count); // <- 2
+
+        
+    }
+    
+}
+ 
+```
+위의 while 문을 for 문으로 변경해 보앗다.
+```java
+class Tutorial {
+    
+    public static void main(String args[]) {
+       
+         int count=0;
+
+        for(int num=0; num<100; num++){ // <-int num = 0 으로 햇을때 0,35,70 3가지가 왜나오지?
+            // while(num++<100) <- 다음줄 부터 1 더하겠다는 의미네.. 그래서 for문에서는 int num=1이 맞다.
+           
+           if(num % 5 != 0 || num % 7 != 0){
+                continue;
+            }
+            count++;
+            System.out.println(num);
+        }
+        System.out.println("count="+ count);
+
+        
+    }
+    
+}
+ 
+```
