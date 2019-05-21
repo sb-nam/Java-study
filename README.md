@@ -447,7 +447,7 @@ class Tutorial {
     }
     
 }
-  그런데 double height 이라고 매개변수 선언을 했는대 왜 출력 값은 myHeight으로 나오지??
+  
  
 ```
 
