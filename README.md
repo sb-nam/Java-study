@@ -424,7 +424,7 @@ class Tutorial {
 - 메소드는 여러개의 값을 한번에 전달도 가능 하고, 값을 전달하지 않아도 된다.
 ```java
 class Tutorial {
-    
+      
     public static void main(String args[]) {
        
         double myHeight=175.9;
@@ -450,4 +450,31 @@ class Tutorial {
   
  
 ```
+- 값을 반환하는 메소드
+```java
+class Tutorial {
+    //   void = 값을 반환하지 않겠다.
+    public static void main(String args[]) {
+       
+        int result = adder(4,5);
+        System.out.println("4 + 5 ="+ result);
+        System.out.println("3.5 * 3.5=" + square(3.5));
+    }
+     //   int adder -> int = int 형 데이터를 반환하겠다.
+    public static int adder(int num1,int num2){
+        int addResult= num1 + num2;
+        return addResult;
+    }
+     //  double square -> double = double 형 데이터를 반환하겠다.
+    public static double square(double num){
+        return num * num;
+
+        
+    }
+    
+}
+  
+ 
+```
+
 
