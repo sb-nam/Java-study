@@ -227,3 +227,32 @@ class Tutorial {
 ```
 **while 문 -> 검사,실행 순서
 **do~while 문 -> 실행,검사 
+
+## for문
+
+```java
+class Tutorial {
+    
+    public static void main(String args[]) {
+       
+         //       1       2      3
+       for(int num=0; num<3; num++){  // int num=0;    <-  1
+                                      // while(num<3)   <- 2
+           System.out.println(num);   // System.out.println(....)
+                                      // num++;       <- 3
+       }
+       /*
+       실행 순서
+         //       1       2    4  
+       for(int num=0; num<3; num++){        // int num=0;    <-  1
+                                            // while(num<3)   <- 2
+           System.out.println(num); <-3     // System.out.println(....) <- 3
+                                            // num++;       <- 4
+       }
+       */
+       
+    }
+}
+for 문은 위와 같이 while문과 같은 형식을 취한다. 또한 실행 순서도 while문과 비슷한 순서로 진행함을 알아 두자!
+ 
+```
