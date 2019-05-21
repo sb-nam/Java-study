@@ -473,7 +473,7 @@ class Tutorial {
     //  double square -> double = double 형 데이터를 반환하겠다.
    
    public static double square(double num){
-        return num * num;   = return 반환 하겠다. 뭘? num * num 값을 반환 하겠다.
+        return num * num;     // = return 반환 하겠다. 뭘? num * num 값을 반환 하겠다.
 
         
     }
