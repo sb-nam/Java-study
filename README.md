@@ -453,21 +453,27 @@ class Tutorial {
 - 값을 반환하는 메소드
 ```java
 class Tutorial {
-    //   void = 값을 반환하지 않겠다.
-    public static void main(String args[]) {
+   
+   //   void = 값을 반환하지 않겠다.
+   
+   public static void main(String args[]) {
        
         int result = adder(4,5);
         System.out.println("4 + 5 ="+ result);
         System.out.println("3.5 * 3.5=" + square(3.5));
     }
+     
      //   int adder -> int = int 형 데이터를 반환하겠다.
+    
     public static int adder(int num1,int num2){
         int addResult= num1 + num2;
-        return addResult;
+        return addResult;      // return = 반환 하겠다. 뭘? addResult 값을 반환하겠다.
     }
-     //  double square -> double = double 형 데이터를 반환하겠다.
-    public static double square(double num){
-        return num * num;
+    
+    //  double square -> double = double 형 데이터를 반환하겠다.
+   
+   public static double square(double num){
+        return num * num;   = return 반환 하겠다. 뭘? num * num 값을 반환 하겠다.
 
         
     }
