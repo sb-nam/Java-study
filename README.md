@@ -421,3 +421,33 @@ class Tutorial {
 }
  
 ```
+- 메소드는 여러개의 값을 한번에 전달도 가능 하고, 값을 전달하지 않아도 된다.
+```java
+class Tutorial {
+    
+    public static void main(String args[]) {
+       
+        double myHeight=175.9;
+        hiEveryone(12, 12.5); // <- 정수형 변수 int ,실수형 변수 double
+        hiEveryone(13, myHeight); 
+        byEveryone(); // <- 공란
+    }
+
+    public static void hiEveryone(int age, double height){ // <- 정수 12 가 먼저 나오기 때문에 
+                                                           // int age , double height 순서. 자료형 일치 시킴. 
+        System.out.println("i am "+ age + " yeard old");
+        System.out.println("myHeight" + height + "cm");
+    }
+
+    public static void byEveryone(){ // <- 위에가 공란이기 때문에 공란.
+
+        System.out.println("see you again");
+
+        
+    }
+    
+}
+  그런데 double height 이라고 매개변수 선언을 했는대 왜 출력 값은 myHeight으로 나오지??
+ 
+```
+
