@@ -515,5 +515,39 @@ class Tutorial {
   
  
 ```
+## 변수의 스코프
+- 스코프(scope)는 범위 또는 영역 이라는 뜻을 갖고 있다.
+- 영역은 변수의 접근, 또는 변수가 존재할 수 있는 영역을 의미한다.
+```java
+class Tutorial {
+   
+     public static void main(String args[]) {
+       
+      boolean scope=true;                                  // ---
+      if(scope) {                    // @@@@
+          int num=1;
+          num++;
+          System.out.println(num);
+      }                              // @@ num =1 의 유효범위
+      else {                         // ##
+          int num=2;
+          System.out.println(num);
+      }                              //## num =2 의 유효범위
+      simple();
+                                                          //---변수 scope의 유효범위
+    }
+    public static void simple() {    //%% 
+
+        int num=3;
+        System.out.println(num);
+
+    
+    
+    }                                //%% num=3의 유효범위
+    
+}
+  
+   선언된 지역을 벗어나면 변수는 자동 소멸된다.
+```   
 
 
