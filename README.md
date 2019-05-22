@@ -549,5 +549,35 @@ class Tutorial {
   
    선언된 지역을 벗어나면 변수는 자동 소멸된다.
 ```   
+## 클래스와 인스턴스
+```java
+ class Number {
 
+    int num=0;
 
+    public void addNum(int n) {
+
+        num+=n;
+    }
+    public int getNumber() {
+        return num;
+    }
+}
+
+ class passInstance {
+
+    public static void main(String [] args) {
+
+        Number nInst= new Number();
+        System.out.println("before call method :" + nInst.getNumber());
+
+        simpleMethod(nInst);
+        System.out.println("after call method :"+ nInst.getNumber());
+    }
+    public static void simpleMethod(Number numb) {
+
+        numb.addNum(12);
+    }
+}
+
+```
