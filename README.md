@@ -618,7 +618,7 @@ class FruitBuyer { //구매자 정보
 
     public void buyApple(FruitSeller seller, int money) {
 
-        numOfApple+=seller.saleApple(money);
+        numOfApple+=seller.saleApple(money); // <- ?
         myMoney-=money;
     }
     public void showBuyResult() {
