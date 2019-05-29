@@ -645,3 +645,37 @@ class FruitSalesMain1 {
 }
 
 ```
+##생성자
+-**생성자는 인스턴스 하나당 1번만 호출된다.!
+- 자바 인스턴스 생성시 반드시 생성자는 호출된다.
+- 생성자의 조건 1.클래스의 이름과 동일한 매소드
+2.반환형이 선언되어 있지 않으면서, 반환하지 않는 매소드 
+```java
+class Number {
+    
+    int num;
+    
+    public Number() {
+        
+        num=10;
+        System.out.println("생성자 호출!");
+    }
+    public int getNumber() {
+        
+        return num;
+    }
+}
+
+class Constructor1 {
+    
+    public static void main(String[] args) {
+        
+        Number num1 = new Number();
+        System.out.println(num1.getNumber());
+        
+        Number num2 = new Number();
+        System.out.println(num2.getNumber());
+    }
+}
+ 
+```
