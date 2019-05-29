@@ -670,7 +670,7 @@ class Constructor1 {
     
     public static void main(String[] args) {
         
-        Number num1 = new Number();
+        Number num1 = new Number(); // 생성과 동시에 호출됨.
         System.out.println(num1.getNumber());
         
         Number num2 = new Number();
