@@ -554,29 +554,33 @@ class Tutorial {
 ## 클래스와 인스턴스
 - 클래스는 내가 만들고자 하는 틀 이고, 그 틀 안에 들어 있는 내용물을 객체 라고 볼수 있다.
 - 객체란 내용물 즉 내가 구현할 대상이라고 볼수 있다.
+- 인스턴스는 실체화 된 대상이라고 볼수 있다.
 
 ```java
- class Number {
+ class Number {         
 
     int num=0;
 
-    public void addNum(int n) {
+    public void addNum(int n) {   
 
         num+=n;
     }
     public int getNumber() {
         return num;
     }
-}
+}                     
 
  class passInstance {
 
-    public static void main(String [] args) {
+    public static void main(String [] args) {    
 
-        Number nInst= new Number();
+        Number nInst= new Number(); // 참조 변수 nInst가 class Number를 참조함.
         System.out.println("before call method :" + nInst.getNumber());
+        //nInst가 getNumber를 호출함 -> 객체 내에 존재하는 변수 int num=0; 값이 반환됨.
 
-        simpleMethod(nInst);
+        simpleMethod(nInst); 
+        // 아래에 있는 simpleMethod를 호출하면서 class Number를 참조하는 nInst가 인자로 전달,
+        // 호출된 매개변수 Number numb로 받으면서 numb를 이용하여 addNum 메소드를 호출함.
         System.out.println("after call method :"+ nInst.getNumber());
     }
     public static void simpleMethod(Number numb) {
@@ -587,30 +591,30 @@ class Tutorial {
 
 ```
 ```java
-class FruitSeller {
+class FruitSeller { // 판매자 정보
 
     int numOfApple= 20;
     int myMoney= 0;
-    final int APPLE_PRICE=1000;
+    final int APPLE_PRICE=1000;  // 변수의 상수화 final
 
-    public int saleApple(int money) {
+    public int saleApple(int money) { // 과일 판매 기능
 
-        int num= money/APPLE_PRICE;
+        int num= money/APPLE_PRICE; 
         numOfApple-=num;
         myMoney+=money;
         return num;
     }
-    public void showSaleResult() {
+    public void showSaleResult() { //판매 현황
 
         System.out.println("The remainder Apple ="+ numOfApple);
         System.out.println("Sales revenue ="+ myMoney);
     }
 }
 
-class FruitBuyer {
+class FruitBuyer { //구매자 정보
 
-    int myMoney= 5000;
-    int numOfApple= 0;
+    int myMoney= 5000; // 소지금 5000
+    int numOfApple= 0; // 소유 과일 0
 
     public void buyApple(FruitSeller seller, int money) {
 
@@ -628,9 +632,9 @@ class FruitSalesMain1 {
 
     public static void main(String[] args) {
 
-        FruitSeller seller= new FruitSeller();
-        FruitBuyer buyer= new FruitBuyer();
-        buyer.buyApple(seller, 2000);
+        FruitSeller seller= new FruitSeller(); // FruitSeller 참조하겠다.
+        FruitBuyer buyer= new FruitBuyer();    // FruitBuyer 참조하겠다.
+        buyer.buyApple(seller, 2000);   // seller에게 2000원 어치 구매
 
         System.out.println("Current situation of fruit seller ");
         seller.showSaleResult();
