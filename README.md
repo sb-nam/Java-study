@@ -598,14 +598,13 @@ class FruitSeller { // 판매자 정보
     final int APPLE_PRICE=1000;  // 변수의 상수화 final
 
     public int saleApple(int money) { // 과일 판매 기능
-
         int num= money/APPLE_PRICE; 
         numOfApple-=num;
         myMoney+=money;
-        return num;
+        return num; // <- 2
     }
+    
     public void showSaleResult() { //판매 현황
-
         System.out.println("The remainder Apple ="+ numOfApple);
         System.out.println("Sales revenue ="+ myMoney);
     }
@@ -617,10 +616,10 @@ class FruitBuyer { //구매자 정보
     int numOfApple= 0; // 소유 과일 0
 
     public void buyApple(FruitSeller seller, int money) {
-
-        numOfApple+=seller.saleApple(money); // <- ?
+        numOfApple+=seller.saleApple(money); 
         myMoney-=money;
     }
+    
     public void showBuyResult() {
 
         System.out.println("Current Balance ="+ myMoney);
@@ -684,3 +683,6 @@ class Constructor1 {
 - 메소드와 변수의 이름 규칙 = 소문자 시작, 둘이상 단어 새로운 첫글자 대문자 시작.
 - 상수의 이름 규칙 = 전부 대문자, 둘 이상 단어 묶일시 _ 표시.
 
+## 클래스 패스와 패키지
+- 클래스 패스 = 클래스를 찾는 경로.
+- 패키지
