@@ -130,7 +130,8 @@ class Operator {
 		
 		result = number1 / number2;
 		System.out.println(result);
-
+		
+                scanner.close();
 
 	}
 
@@ -163,6 +164,7 @@ class GradeCard {
 		
 		System.out.println("average : " + result );
 		
+		sc.close();
 	
 	}
 
