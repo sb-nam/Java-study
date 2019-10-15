@@ -43,6 +43,36 @@ class Tutorial {
   
 ```
 
+```java
+
+import java.util.Scanner;
+
+class InputVariable {
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		
+		int intNumber;
+		double doubleNumber;
+		String str;
+		
+		intNumber = scanner.nextInt();
+		doubleNumber = scanner.nextDouble();
+		str = scanner.next();
+		
+		System.out.println("입력한 정수 : " + intNumber);
+		System.out.println("입력한 실수 : " + doubleNumber);
+		System.out.println("입력한 문자열 : " + str);
+	}
+
+}
+
+
+
+
+```
+
 [목차로](#목차)
   
 ## 연산자
