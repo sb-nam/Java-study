@@ -67,11 +67,27 @@ class InputVariable {
 	}
 
 }
-
-
-
-
 ```
+
+`친구의 Feedback`
+
+*위의 코드를 살펴보면, scanner가 사용된 뒤 close되지 않고 있습니다.*    
+*사용이 끝난 Scanner는 close() 해주어야 합니다.*     
+*즉, 사용되지 않는 자원을 open하고 있는 상태로, 자원의 낭비가 발생되고 있습니다.*    
+
+```java
+// example
+class InputVariable {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+	
+	... // do something
+	
+	scanner.close();
+    }
+}
+```
+
 
 [목차로](#목차)
   
