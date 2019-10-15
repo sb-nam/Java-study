@@ -84,6 +84,44 @@ class InputVariable {
 - `/` 왼쪽의 피연산자 값을 오른쪽의 값으로 나눈다.(a=7/3)
 - `%` 왼쪽의 피연산자 값을 오른쪽의 피연산자 값으로 나눴을때 얻게 되는 나머지를 반환한다.(a=7%3)
 
+```java
+
+import java.util.Scanner;
+
+class Operator {
+
+	public static void main(String[] args) {
+		
+		double number1, number2;
+		double result = 0;
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("첫 번째 수 입력 : ");
+		number1 = scanner.nextDouble();
+		
+                System.out.println("두 번째 수 입력 : ");
+		number2 = scanner.nextDouble();
+		
+		result = number1 + number2;
+		System.out.println(result);
+		
+		result = number1 - number2;
+		System.out.println(result);
+		
+		result = number1 * number2;
+		System.out.println(result);
+		
+		result = number1 / number2;
+		System.out.println(result);
+
+
+	}
+
+}
+
+```
+
  
 ## 관계 연산자
 
