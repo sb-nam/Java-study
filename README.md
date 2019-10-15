@@ -138,6 +138,39 @@ class Operator {
 
 ```
 
+```java
+
+import java.util.Scanner;
+
+class GradeCard {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int korean, english, math, result;
+		
+		System.out.println("korean score : " );
+		korean = sc.nextInt();
+		
+		System.out.println("english score : " );
+		english = sc.nextInt();
+		
+		System.out.println("math score : " );
+		math = sc.nextInt();
+		
+		result = (korean + english + math) / 3;
+		
+		System.out.println("average : " + result );
+		
+	
+	}
+
+
+}
+
+```
+
  
 ## 관계 연산자
 
