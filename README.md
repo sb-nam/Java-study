@@ -88,6 +88,24 @@ class InputVariable {
 }
 ```
 
+```java
+
+
+public class Quiz {
+
+	public static void main(String[] args) {
+		
+		String str = " 더휴먼 ";
+		
+		System.out.println(10 + 20 + str); // int + int + String 으로 계산 되어 = 30 더휴면
+		System.out.println(str + 10 + 20); // String + 문자 10 + 문자 20 으로 형변환 되어 더휴면 1020
+
+	}
+
+}
+
+```
+
 
 [목차로](#목차)
   
