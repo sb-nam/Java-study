@@ -229,6 +229,46 @@ else {
 
 조건식: 참, 거짓이 구분이 되는식( true,false)
 
+```java
+
+import java.util.Scanner;
+
+public class GradeCard2 {
+
+	public static void main(String[] args) {
+		
+		double kor,eng,math,average;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("국어 점수 : " );
+		kor = sc.nextDouble();
+		
+		System.out.println("영어 점수 : " );
+		eng = sc.nextDouble();
+		
+		System.out.println("수학 점수 :" );
+		math = sc.nextDouble();
+		
+		average = (kor + eng + math) / 3;
+		
+		if(average >= 80) {
+			
+			System.out.println("우수학생");
+		}
+		
+		else {
+			
+			System.out.println("노력하세요");
+		}
+		
+		
+
+	}
+
+}
+```
+
 
 
 ## 조건 연산자 (삼항 연산자)
