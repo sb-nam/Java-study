@@ -321,6 +321,44 @@ public class GradeCard3 {
 }
 ```
 
+```java
+
+import java.util.Scanner;
+
+public class Population {
+
+	public static void main(String[] args) {
+		
+		long pop;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("인구수 입력 :");
+		pop = sc.nextLong();
+		
+		if(pop >= 10000000) {
+			
+			System.out.println("대도시");
+		}
+		
+		else if(pop >= 500000) {
+			
+			System.out.println("중도시");
+		}
+		
+		else {
+			
+			System.out.println("소도시");
+		}
+		
+		sc.close();
+
+	}
+
+}
+
+```
+
 
 ## 조건 연산자 (삼항 연산자)
 
