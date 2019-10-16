@@ -252,6 +252,8 @@ public class GradeCard2 {
 		
 		average = (kor + eng + math) / 3;
 		
+		System.out.println("평균 점수 : " + average);
+		
 		if(average >= 80) {
 			
 			System.out.println("우수학생");
