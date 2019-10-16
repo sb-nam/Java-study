@@ -640,6 +640,37 @@ class Tutorial {
 - **for(초기값,조건식,증가값)
 
 ```java
+
+public class ForExe {
+
+	public static void main(String[] args) {
+		
+		int even = 0;
+		int odd = 0;
+		
+		for(int i = 1; i<=100; i++) {
+			
+			if(i % 2 == 0) {
+			
+				even = even + i;
+			}
+			else {
+				
+				odd = odd + i;
+			}
+		}
+		
+		System.out.println("1부터 100까지의 짝수 합 :" + even);
+		System.out.println("1부터 100까지의 홀수 합 :" + odd);
+
+	}
+
+}
+```
+
+
+
+```java
 class Tutorial {
     
     public static void main(String args[]) {
