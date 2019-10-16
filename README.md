@@ -696,6 +696,31 @@ class Tutorial {
 for 문은 위와 같이 while문과 같은 형식을 취한다. 또한 실행 순서도 while문과 비슷한 순서로 진행함을 알아 두자!
  
 ```
+
+```java
+
+import java.util.Scanner;
+
+public class MultiplicationTable {
+
+	public static void main(String[] args) {
+						
+		System.out.println("원하는 단 입력 :");
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int n = sc.nextInt();
+						
+	    for(int i =1; i <= 9; i++) {
+	    
+	    	System.out.println(n +" * "+ i + " = " + (n*i) );
+	    }
+	    	    	  
+
+	}
+
+}
+```
 [목차로](#목차)
 
 
