@@ -359,6 +359,59 @@ public class Population {
 
 ```
 
+```java
+
+import java.util.Scanner;
+
+public class GradeCard4 {
+
+	public static void main(String args[]) {
+		
+		double kor, eng, evr;
+		
+		Scanner sc = new Scanner(System.in);
+							
+		System.out.println("국어 점수 : " );
+		kor = sc.nextDouble();
+		
+		System.out.println("영어 점수 : " );
+		eng = sc.nextDouble();
+		
+/*	    if(kor >= 80 && eng >= 80 ) {
+			
+			System.out.println("우수");
+		}
+		
+		else {
+			
+			System.out.println("보통");
+		} 
+*/		
+		
+		if(kor >= 80) {
+			
+			if(eng >= 80) {
+			
+			System.out.println("우수");
+			}
+		    else {
+			
+			System.out.println("보통");
+		    }
+		
+		}
+		
+		else {
+			
+			System.out.println("보통");
+		}
+		
+		
+	}
+
+}
+```
+
 
 ## 조건 연산자 (삼항 연산자)
 
