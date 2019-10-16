@@ -581,6 +581,7 @@ class Tutorial {
 **do~while 문 -> 실행,검사 
 
 ## for문
+- **for(초기값,조건식,증가값)
 
 ```java
 class Tutorial {
