@@ -264,13 +264,62 @@ public class GradeCard2 {
 			System.out.println("노력하세요");
 		}
 		
-		
+		sc.close();
 
 	}
 
 }
 ```
+```java
 
+import java.util.Scanner;
+
+public class GradeCard3 {
+
+	public static void main(String[] args) {
+		
+		double kor, eng, math, avr;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("국어 점수 : ");
+		kor = sc.nextDouble();
+		
+		System.out.println("영어 점수 : ");
+		eng = sc.nextDouble();
+		
+		System.out.println("수학 점수 : ");
+		math = sc.nextDouble();
+		
+		avr = (kor + eng + math) / 3;
+		System.out.println("평균 점수 : " + avr);
+		
+		if(avr >= 90) {
+			
+			System.out.println("A 학점");
+		}
+		
+		else if(avr >= 80) {
+			
+			System.out.println("B 학점");
+		}
+		
+		else if(avr >= 70){
+			
+			System.out.println("C 학점");
+		}
+		
+		else {
+			
+			System.out.println("F 학점");
+		}
+			
+		sc.close();		
+		
+	}
+
+}
+```
 
 
 ## 조건 연산자 (삼항 연산자)
