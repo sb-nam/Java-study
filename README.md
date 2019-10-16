@@ -406,7 +406,7 @@ public class GradeCard4 {
 			System.out.println("보통");
 		}
 		
-		
+		sc.close();
 	}
 
 }
