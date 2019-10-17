@@ -802,7 +802,7 @@ public class Sequence {
 			if (i % 7 == 0) {
 				
 				System.out.println(i);
-                count++;
+                                count++;
 				
 			}
 						
