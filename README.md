@@ -790,6 +790,7 @@ class MultiplicationTable2 {
 ```java
 
 
+
 public class Sequence {
 
 	public static void main(String[] args) {
@@ -800,18 +801,18 @@ public class Sequence {
 			
 			if (i % 7 == 0) {
 				
+				System.out.println(i);
                 count++;
 				
 			}
 						
 		}
 		
-		System.out.println(count);
+		System.out.println(" 7의 배수의 개수" + count);
 
 	}
 
 }
-
 ```
 [목차로](#목차)
 
