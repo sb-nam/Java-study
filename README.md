@@ -789,26 +789,27 @@ class MultiplicationTable2 {
 
 ```java
 
-
-
 public class Sequence {
 
 	public static void main(String[] args) {
-
-		int count = 0;
+		
+        int count = 0;
+        int total = 0;
 
 		for (int i = 1; i <= 100; i++) {
 			
 			if (i % 7 == 0) {
 				
 				System.out.println(i);
-                                count++;
-				
+                
+				count++;
+				total += i;
 			}
-						
+					
 		}
 		
-		System.out.println(" 7의 배수의 개수" + count);
+		System.out.println(" 7의 배수의 총합 : " + total);
+		System.out.println(" 7의 배수의 개수 : " + count);
 
 	}
 
