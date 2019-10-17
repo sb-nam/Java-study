@@ -945,7 +945,7 @@ class ArrayEx3 {
 			
 			   max = arr [i];
 				
-			} if(min > arr [i]) {
+			} else if(min > arr [i]) {
 				
 				min = arr [i];
 			}
@@ -959,7 +959,6 @@ class ArrayEx3 {
 	}
 
 }
-
 ```
 
 [목차로](#목차)
