@@ -906,6 +906,41 @@ public class ArrayEx2 {
 
 ```
 
+```java
+
+import java.util.Scanner;
+
+class ArrayEx3 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+									
+		int arr [] = new int [5];
+		int sum = 0;
+		double aver = 0;
+		
+		for(int i = 0; i < arr.length; i++) {
+			
+			System.out.print(i + 1 + "번 째 수 입력 :");
+			arr [i] = sc.nextInt();
+			
+			sum += arr [i];
+										
+		}
+		
+		aver = sum / arr.length;
+		
+		System.out.println("배열의 합 : " + sum);
+		System.out.println("배열의 평균 :" + aver);
+		
+		sc.close();
+	}
+
+}
+
+```
+
 [목차로](#목차)
 
 
