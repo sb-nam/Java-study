@@ -14,6 +14,7 @@
 - [while 문](#while-문)
 - [do while 문](#do-while-문)
 - [for문](#for문)
+- [배열](#배열)
 - [continue와 break](#continue와-break)
 - [반복문의 중첩](#반복문의-중첩)
 - [break 레이블](#break-레이블)
@@ -864,7 +865,48 @@ public class StarPrint2 {
 ```
 [목차로](#목차)
 
+## 배열
 
+```java
+
+class ArrayEx {
+
+	public static void main(String[] args) {
+		
+		int arr [] = { 10, 20, 30, 40, 50, 60, 70, 80, 90};
+		
+		for(int i = 0; i < arr.length; i++) {
+			
+			System.out.println(arr [ i ]);
+		}
+	}
+
+}
+
+```
+
+```java
+
+
+public class ArrayEx2 {
+	
+	public static void main(String[] args) {
+		
+		int arr [] = new int [5]; 
+		// arr 이라는 이름의 배열을 만들고
+		// 변수의 개수를 5개 만들었다.
+		// new 키워드는 참조형 자료형이기 때문에 사용 되었다.
+		
+		int arr2 [] = { 10,20,30,40 };
+		// 10,20,30,40으로 이루어진 배열을 만들어라.
+		// arr2 라는 이름으로 배열을 만들었다.
+	}
+
+}
+
+```
+
+[목차로](#목차)
 
 
 ## continue와 break
