@@ -917,7 +917,9 @@ class ArrayEx3 {
 		Scanner sc = new Scanner(System.in);
 									
 		int arr [] = new int [5];
+		
 		int sum = 0;
+						
 		double aver = 0;
 		
 		for(int i = 0; i < arr.length; i++) {
@@ -926,13 +928,32 @@ class ArrayEx3 {
 			arr [i] = sc.nextInt();
 			
 			sum += arr [i];
-										
+							
 		}
 		
 		aver = sum / arr.length;
 		
 		System.out.println("배열의 합 : " + sum);
 		System.out.println("배열의 평균 :" + aver);
+		
+		int max = arr [0];
+		int min = arr [0];
+		
+		for(int i = 1; i < arr.length; i++) {
+			
+			if(max < arr.length) {
+			
+			   max = arr [i];
+				
+			} if(min > arr.length) {
+				
+				min = arr [i];
+			}
+							
+		}
+		
+		System.out.println("최대 값 :" + max);
+		System.out.println("최소 값 :" + min );
 		
 		sc.close();
 	}
