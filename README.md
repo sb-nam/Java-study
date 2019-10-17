@@ -457,6 +457,47 @@ public class GradeCard4 {
 }
 ```
 
+
+`친구의 Feedback`
+
+*조건문을 사용할 때, 괄호를 작성하는 규칙이 존재합니다.*    
+*if, else if, else를 작성할 때는 개행을 하는 것이 아니라 `}` 뒤에 이어서 작성합니다.*    
+*자바 개발자들간의 coding convention(코드 작성 규칙)이므로, 이 규칙을 지킨다면 다른 개발자와의 협업에서 큰 도움이 됩니다.*    
+
+```java
+// bad case ㅡㅡ
+class Example {
+    public static void main(String[] args) {
+        int grade = 80; // <- temporary variable
+	
+	if(90 <= grade) {
+	    System.out.println("A grade");
+	} 
+	else if(80 <= grade) {
+	    System.out.println("B grade");
+	} 
+	else {
+	    System.out.println("C grade");
+	}
+    }
+}
+
+// good case ^^
+class Example {
+    public static void main(String[] args) {
+        int grade = 80; // <- temporary variable
+	
+	if(90 <= grade) {
+	    System.out.println("A grade");
+	} else if(80 <= grade) {
+	    System.out.println("B grade");
+	} else {
+	    System.out.println("C grade");
+	}
+    }
+}
+```
+
 [목차로](#목차)
 
 
