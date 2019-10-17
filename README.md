@@ -1431,6 +1431,40 @@ class Constructor1 {
 - 문자열의 복잡한 조합의 과정에서는 StringBuilder의 인스턴스가 활용된다.
 - 때문에 추가로 생성되는 인스턴스의 수는 최대 두 개 이다.
 
+`친구의 feedback`
+
+*for문 예제에서 해보았던 starPrint 문제를 StringBuilder를 통해 풀어볼 수 있습니다.*    
+```java
+// 기존의 방법
+class StarPrint {
+    public static void main(String[] args) {
+	for(int i=1; i<=5; i++) {
+            for(int j=5; j>=i; j--) {
+	        System.out.println("*");
+            }
+
+	    System.out.println();
+        }
+    }
+}
+
+// StringBuilder를 사용한 방법
+
+class StarPrint {
+    public static void main(String[] args) {
+        StringBuilder stringBuilder = new StringBuilder();
+        for(int i=1; i<=5; i++) {
+            for(int j=5; j>=i; j--) {
+                stringBuilder.append('*');
+            }
+
+            stringBuilder.append('\n');
+        }
+
+        System.out.println(stringBuilder.toString());
+    }
+}
+```
 [목차로](#목차)
 
 
