@@ -769,6 +769,39 @@ class DoWhileEx {
 }
 
 ```
+
+```java
+
+
+class DoWhileEx2 {
+
+	public static void main(String[] args) {
+		
+		int i = 2;
+		int j = 1;
+		
+		do {
+			
+			System.out.println(i + " 단 ");
+			
+			do {
+				
+				System.out.println(i + " * " + j + " = " + i * j );
+				
+				j++; // j 가 10이 되어 반복문 빠져나감.
+				
+			}while(j <= 9);
+			
+			i++;
+			j = 1; // j = 10 을 1 로 초기화 하여 다시 반복 조건 충족.
+			
+		}while(i <= 9);
+
+	}
+
+}
+
+```
 **while 문 -> 검사,실행 순서
 **do~while 문 -> 실행,검사 
 
