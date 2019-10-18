@@ -1221,6 +1221,106 @@ while문은 정상 출력이 되는대 for문은 왜 출력이 안되는지 모�
 출력을 하려면 for문 밖에 num을 선언 해주거나, for문 안쪽으로 들여서 설정을 해야한다!
  
 ```
+
+```java
+
+import java.util.Scanner;
+
+class SumOfInt {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println(" 첫 번째 수를 입력 하세요 : ");
+		int num1 = sc.nextInt();
+
+		System.out.println(" 두 번째 수를 입력 하세요 : ");
+		int num2 = sc.nextInt();
+
+		int sum = 0;
+
+//		if (num1 < num2) {
+//
+//			for (int i = num1; i <= num2; i++) {
+//
+//				sum += i;
+//
+//			}
+//
+//		} else if (num1 > num2) {
+//
+//			for (int j = num2; j <= num1; j++) {
+//
+//				sum += j;
+//			}
+//
+//		} else {
+//			
+//			sum = num1 + num2;
+//		}
+
+//		int i = num1;
+//		int j = num2;
+//		if (num1 < num2) {
+//		
+//			while (i <= num2) {
+//				
+//				sum += i;
+//				i++;	
+//							
+//			}
+//		} else if(num1 > num2) {
+//			
+//			while ( j <= num1) {
+//				
+//				sum += j;
+//				j++;
+//				
+//			}
+//									
+//		} else {
+//			
+//			sum = num1 + num2;
+//		}
+		
+		int i = num1;
+		int j = num2;
+		
+		if (num1 < num2) {
+			
+			do {
+				
+				sum += i;
+				i++;
+				
+			}while (i <= num2);
+		
+		} else if (num1 > num2) {
+			
+			do {
+				
+				sum += j;
+				j++;
+				
+			}while (j <= num1);
+			
+		} else {
+			
+			sum = num1 + num2;
+		}
+		
+		System.out.println(" 두 숫자 사이의 합 : " + num1 + " + " + num2 + " = " + sum);
+		
+		sc.close();
+	}
+
+}
+
+3가지 반복문을 사용 하여 두 숫자 사이의 합 을 구해 보았다.
+
+```
+
 [목차로](#목차)
 
 
