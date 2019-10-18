@@ -990,6 +990,42 @@ public class StarPrint2 {
 }
 
 ```
+
+```java
+
+import java.util.Scanner;
+
+class SumOfMul {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("숫자 입력 하세요 : ");
+		int fir = sc.nextInt();
+
+		int sum = 1;
+
+		if (fir <= 10 && fir > 0) {
+
+			for (int i = 1; i <= fir; i++) {
+
+				sum *= i;
+				
+			}
+			
+			System.out.println(fir + "!" + " 은 " + "'"+ sum + "'"  + " 입니다.");
+
+		} else {
+
+			System.out.println("오류 입니다.");
+		}
+
+	}
+
+}
+
+```
 [목차로](#목차)
 
 ## 배열
