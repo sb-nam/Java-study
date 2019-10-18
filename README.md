@@ -1206,6 +1206,42 @@ class Tutorial {
 
  i가 0일때 j=0,1,2 . i가 1일때 j=0,1,2 . i가 2일때 j=0,1,2 로 진행된다.
 ```
+
+```java
+
+import java.util.Scanner;
+
+class StarPrint1 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("가로 길이를 입력 하세요 :");
+		int  n = sc.nextInt();
+		
+		System.out.println("세로 길이를 입력 하세요 :");
+		int  m = sc.nextInt();
+						
+		if( n <= 1000 && m <= 1000) {
+			
+			for(int i = 1; i <= m; i++ ) {
+				
+				for(int j = 1; j <= n; j++) {
+					
+					System.out.print("*");
+				}
+				
+				System.out.println();
+			}
+		}
+		
+		sc.close();
+	}
+
+}
+
+```
 [목차로](#목차)
 
 
