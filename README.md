@@ -647,6 +647,37 @@ class Tutorial {
 }
  
 ```
+
+```java
+
+class WhileEx {
+
+	public static void main(String[] args) {
+
+		int i = 1; // 초기 값
+		int j = 1;
+
+		while (i <= 5) { // 조건이 참일 때 반복
+
+			while (j <= 3) {
+
+				System.out.println("i : " + i + ", j : " + j);
+
+				j++;
+
+			}
+
+			i++;
+			j = 1;
+
+		}
+
+	}
+
+}
+```
+
+
 [목차로](#목차)
 
 
@@ -674,6 +705,37 @@ class Tutorial {
     
 }
  
+```
+
+```java
+
+
+class DoWhileEx {
+
+	public static void main(String[] args) {
+		
+		int i = 1; // 초기 값
+		int j = 1;
+		
+		do {
+			
+			do {
+				
+				System.out.println("i : "+ i + ", j : "+j);
+				
+				j++;
+				
+			}while(j <= 3);
+			
+			j = 1;
+			i++;
+			
+		}while(i <= 5); // 조건식
+
+	}
+
+}
+
 ```
 **while 문 -> 검사,실행 순서
 **do~while 문 -> 실행,검사 
