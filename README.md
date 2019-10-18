@@ -677,6 +677,38 @@ class WhileEx {
 }
 ```
 
+```java
+
+
+class WhileEx2 {
+
+	public static void main(String[] args) {
+
+		int i = 2;
+		int j = 1;
+
+		while (i <= 9) {
+
+			System.out.println(i + " 단 ");
+					
+			while (j <= 9) {
+				
+				System.out.println(i + " * " + j + " = " + i * j);
+				
+				j++; // j 가 10이 되어 반복문 빠져나감.
+				
+			}
+			
+			i++;
+			j = 1; // j = 10 을 1부터 다시 반복하기 위해 1로 초기화.
+		}
+
+	}
+
+}
+
+```
+
 
 [목차로](#목차)
 
