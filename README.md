@@ -1088,6 +1088,50 @@ class ArrayEx3 {
 }
 ```
 
+`친구의 feedback`
+
+*MAX와 MIN 값을 구하는 방법은 Math class에서 제공하는 함수를 사용할 수 있습니다.*
+
+```java
+public class MaxMinExample {
+
+    public static void main(String[] args) {
+        int[] arr = new int[]{1, 2, 3, 4, 5};
+        int max = arr[0];
+        int min = arr[0];
+
+        for(int i=0; i<arr.length; i++) {
+            max = Math.max(max, arr[i]);
+            min = Math.min(min, arr[i]);
+        }
+
+        System.out.println("Max value :" + max); // print 5
+        System.out.println("Min value :" + min ); // print 1
+    }
+}
+
+```
+
+*Math class에서 제공하는 max와 min 함수의 내부를 살펴보면 다음과 같은 코드로 이루어져 있습니다.*
+*코드를 작성하고, ctrl을 누른상태로 함수명을 클릭하면 내부 코드를 볼 수 있으니, 코드를 살펴보시기 바랍니다*
+```java
+class Math {
+
+    ...
+   
+    public static int max(int a, int b) {
+        return (a >= b) ? a : b;
+    }
+    
+    public static int min(int a, int b) {
+        return (a <= b) ? a : b;
+    }
+    
+    ...
+    
+}
+```
+
 [목차로](#목차)
 
 
