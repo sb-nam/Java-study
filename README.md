@@ -1464,6 +1464,106 @@ class Tutorial {
 - `매개변수` 는 메소드 호출 시 전달되는 값의 저장을 위한 용도로 사용 된다.
 - 메소드 호출시 전달되는 값의 자료형과 '매개변수' 의 자료형은 항상 일치해야 한다.
 - 메소드가 정의되는 위치는 프로그램에 영향을 미치지 않는다.
+
+```java
+
+class MethodExe {
+
+	public static void main(String[] args) {
+
+		System.out.println("메소드 호출");
+
+		hello();
+		goodBye();
+
+		System.out.println("프로그램 종료");
+	}
+
+	private static void hello() {
+
+		System.out.println("hello 호출 영역");
+		System.out.println("하이! 헬로! 안녕?!");
+		System.out.println("hello 끝나는 부분");
+
+	}
+
+	private static void goodBye() {
+
+		System.out.println("goodBye 호출");
+		System.out.println("안녕히 가세요!");
+		System.out.println("goodBye 끝나는 부분!");
+
+	}
+
+}
+
+```
+
+```java
+
+import java.util.Scanner;
+
+class MethodExe2 {
+
+	public static void main(String[] args) {
+		
+		int num1, num2;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println(" 첫 번째 수 입력 : ");
+		num1 = sc.nextInt();
+		
+		System.out.println(" 두 번째 수 입력 : ");
+		num2 = sc.nextInt();
+		
+		sum(num1, num2);
+		sub(num1, num2);
+		mul(num1, num2);
+		div(num1, num2);
+
+	}
+		
+	private static void sum(int num1,int num2) {
+		
+		int value;
+		value = num1 + num2;
+		
+		System.out.println(" 두 수의 합은 : " + value );
+		
+	}
+	
+	private static void sub(int num1, int num2) {
+		
+		int value;
+		value = num1 - num2;
+		
+		System.out.println(" 두 수의 차이는 : " + value );
+		
+	}
+	
+	private static void mul(int num1, int num2) {
+		
+		int value;
+		value = num1 * num2;
+		
+		System.out.println(" 두 수의 곱은 : " + value);
+		
+	}
+	
+	private static void div(int num1, int num2) {
+		
+		int value;
+		value = num1 / num2;
+		
+		System.out.println(" 두 수의 나눗셈은 : " + value);
+		
+	}
+
+}
+
+```
+
 ```java
 class Tutorial {
     
