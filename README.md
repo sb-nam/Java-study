@@ -1565,6 +1565,7 @@ class MethodExe2 {
 ```
 
 ```java
+
 class Tutorial {
     
     public static void main(String args[]) {
@@ -1588,6 +1589,7 @@ class Tutorial {
  
 ```
 - 메소드는 여러개의 값을 한번에 전달도 가능 하고, 값을 전달하지 않아도 된다.
+
 ```java
 class Tutorial {
       
@@ -1617,6 +1619,92 @@ class Tutorial {
  
 ```
 - 값을 반환하는 메소드
+
+ private static 리턴값의 타입  함수명(타입 변수명, 타입 변수명) {
+
+    함수의 명령문
+     
+    return 값;
+
+
+}
+
+리턴값의 타입(void) - 리턴 값을 반환 하지 않는다.
+int, double -- 각각 int, double 타입을 반환한다.
+
+
+```java
+
+import java.util.Scanner;
+
+class MethodExe2 {
+
+	public static void main(String[] args) {
+		
+		int num1, num2, result;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println(" 첫 번째 수 입력 : ");
+		num1 = sc.nextInt();
+		
+		System.out.println(" 두 번째 수 입력 : ");
+		num2 = sc.nextInt();
+		
+		result = sum(num1, num2);
+		System.out.println(" 두 수의 합 : " + result);
+		
+		result = sub(num1, num2);
+	    System.out.println(" 두 수의 차 : " + result);
+		
+	    result = mul(num1, num2);
+	    System.out.println(" 두 수의 곱 : " + result);
+		
+	    div(num1, num2);
+	    System.out.println(" 두 수의 나눗셈 : " + result);
+
+	}
+		
+	private static int sum(int num1,int num2) {
+		
+		int value;
+		value = num1 + num2;
+		
+		return value;
+		
+	}
+	
+	private static int sub(int num1, int num2) {
+		
+		int value;
+		value = num1 - num2;
+		
+		return value;
+		
+	}
+	
+	private static int mul(int num1, int num2) {
+		
+		int value;
+		value = num1 * num2;
+		
+		return value;
+		
+	}
+	
+	private static int div(int num1, int num2) {
+		
+		int value;
+		value = num1 / num2;
+		
+		return value;
+		
+	}
+
+}
+
+
+```
 ```java
 class Tutorial {
    
