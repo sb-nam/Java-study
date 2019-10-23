@@ -1564,6 +1564,60 @@ class MethodExe2 {
 
 ```
 
+
+```java
+
+import java.util.Scanner;
+
+class Solution {
+
+	public static void main(String[] args) {
+
+		long num1, num2, solution;
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("첫 번째 숫자 입력 : ");
+		num1 = sc.nextInt();
+
+		System.out.println("두 번째 숫자 입력 : ");
+		num2 = sc.nextInt();
+
+		solution = sum(num1, num2);
+		System.out.println("두 숫자 사이의 합은 : " + solution);
+
+	}
+
+	private static long sum(long num1, long num2) {
+
+		long solution = 0;
+
+		if (num1 < num2) {
+
+			for (long i = num1; i <= num2; i++) {
+
+				solution += i;
+
+			}
+		}
+
+		if (num1 > num2) {
+
+			for (long j = num2; j <= num1; j++) {
+
+				solution += j;
+
+			}
+
+		} 
+
+		return solution;
+	}
+
+}
+
+```
+
 ```java
 
 class Tutorial {
