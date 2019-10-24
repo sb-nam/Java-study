@@ -2178,6 +2178,90 @@ class Constructor1 {
 }
  
 ```
+
+```java
+
+
+class StudentObjectExe {
+
+	public static void main(String[] args) {
+		
+		Student std1 = new Student("홍길동", "남", "O", 170, 75);
+                Student std2 = new Student("박길순", "여", "A", 165, 50); // Student객체 괄호안의 자료 타입을 맞춰 줘야한다.
+		
+		printAccount(std1);
+		printAccount(std2);
+	}
+
+	private static void printAccount(Student std) {
+		
+		System.out.println("이름 : "+ std.getName() );
+		System.out.println("성별 : "+ std.getGender() );
+		System.out.println("혈액형 : "+ std.getBloodType() );
+		System.out.println("키 : "+ std.getHeight() );
+		System.out.println("몸무게 : "+ std.getWeight() );
+	}
+
+}
+
+```
+
+```java
+
+class Student {
+	
+	private String name;
+	private String bloodType;
+	private String gender;
+	
+	private int height;
+	private int weight;
+	
+	public Student(String name, String gender, String bloodType, int height, int weight) { // 이것과 자료 타입, 순서 일치 시켜야함.
+		
+		this.name = name;
+		this.gender = gender;
+		this.bloodType = bloodType;
+		this.height = height;
+		this.weight = weight;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getBloodType() {
+		return bloodType;
+	}
+	public void setBloodType(String bloodType) {
+		this.bloodType = bloodType;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public int getHeight() {
+		return height;
+	}
+	public void setHeight(int height) {
+		this.height = height;
+	}
+	public int getWeight() {
+		return weight;
+	}
+	public void setWeight(int weight) {
+		this.weight = weight;
+	}
+	
+	
+}
+
+```
+
 [목차로](#목차)
 
 
