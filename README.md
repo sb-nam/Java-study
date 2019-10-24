@@ -1872,6 +1872,183 @@ class Tutorial {
 - 인스턴스는 실체화 된 대상이라고 볼수 있다.
 
 ```java
+
+class Student {
+	
+	String name;
+	String bloodType;
+	String gender;
+	
+	int height;
+	int weight;
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getBloodType() {
+		return bloodType;
+	}
+	public void setBloodType(String bloodType) {
+		this.bloodType = bloodType;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public int getHeight() {
+		return height;
+	}
+	public void setHeight(int height) {
+		this.height = height;
+	}
+	public int getWeight() {
+		return weight;
+	}
+	public void setWeight(int weight) {
+		this.weight = weight;
+	}
+	
+	
+}
+
+```
+
+```java
+
+
+class StudentObjectExe {
+
+	public static void main(String[] args) {
+		
+		Student std = new Student();
+		
+		std.setName("홍길동");
+		std.setGender("남자");
+		std.setBloodType("O");
+		std.setHeight(170);
+		std.setWeight(75);
+		
+		String name = std.getName();
+		String gender = std.getGender();
+		String bloodType = std.getBloodType();
+		
+		int height = std.getHeight();
+		int weight = std.getWeight();
+		
+		printAccount(std);
+	}
+
+	private static void printAccount(Student std) {
+		
+		System.out.println("이름 : "+ std.getName() );
+		System.out.println("성별 : "+ std.getGender() );
+		System.out.println("혈액형 : "+ std.getBloodType() );
+		System.out.println("키 : "+ std.getHeight() );
+		System.out.println("몸무게 : "+ std.getWeight() );
+	}
+
+}
+
+```
+
+```java
+
+
+class Car {
+
+	int price;
+	int drive;
+	double fuelEf;
+		
+	String gearType;
+	String fuelType;
+	String carType;
+	
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	public int getDrive() {
+		return drive;
+	}
+	public void setDrive(int drive) {
+		this.drive = drive;
+	}
+	public double getFuelEf() {
+		return fuelEf;
+	}
+	public void setFuelEf(double fuelEf) {
+		this.fuelEf = fuelEf;
+	}
+	public String getGearType() {
+		return gearType;
+	}
+	public void setGearType(String gearType) {
+		this.gearType = gearType;
+	}
+	public String getFuelType() {
+		return fuelType;
+	}
+	public void setFuelType(String fuelType) {
+		this.fuelType = fuelType;
+	}
+	public String getCarType() {
+		return carType;
+	}
+	public void setCarType(String carType) {
+		this.carType = carType;
+	}
+	
+	
+}
+
+```
+
+```java
+
+
+public class CarObject {
+
+	public static void main(String[] args) {
+		
+		Car car = new Car();
+		
+		car.setPrice(27000000);
+		car.setDrive(100000);
+		car.setFuelEf(14.0);
+		car.setGearType("auto");
+		car.setCarType("suv");
+		car.setFuelType("가솔린");
+		
+		int price = car.getPrice();
+		int drive = car.getDrive();
+		double fuelEf = car.getFuelEf();
+		
+		String gearType = car.getGearType();
+		String carType = car.getCarType();
+		String fuelType = car.getFuelType();
+		
+		System.out.println("가격 : "+ price);
+		System.out.println("주행거리 : "+ drive);
+		System.out.println("연비 : "+ fuelEf);
+		System.out.println("기어타입 : "+ gearType);
+		System.out.println("차종 : "+ carType);
+		System.out.println("연료방식 : "+ fuelType); 
+	}
+
+}
+
+```
+
+
+```java
  class Number {         
 
     int num=0;
