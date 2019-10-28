@@ -1182,6 +1182,42 @@ public class MaxMinExample {
 
 ```
 
+```java
+
+// 양의 정수 10개를 입력받아 배열에 저장하고, 배열에 있는 3의 배수만 출력하라.
+
+import java.util.Scanner;
+
+class ArrayExe {
+
+	public static void main(String[] args) {
+
+		int array[] = new int[10];
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("정수를 10개 입력 하세요 : ");
+
+		for (int i = 0; i < array.length; i++) {
+
+			array[i] = sc.nextInt();
+
+		}
+		for (int i = 0; i < array.length; i++) {
+			
+			if(array [i] %  3 == 0) {
+			
+				System.out.println(" 3의 배수는 : " + array [i]);
+			}
+		}
+		
+		sc.close();
+
+	}
+
+}
+```
+
 *Math class에서 제공하는 max와 min 함수의 내부를 살펴보면 다음과 같은 코드로 이루어져 있습니다.*
 *코드를 작성하고, ctrl을 누른상태로 함수명을 클릭하면 내부 코드를 볼 수 있으니, 코드를 살펴보시기 바랍니다*
 ```java
