@@ -1158,9 +1158,6 @@ class ArrayEx3 {
 }
 ```
 
-`친구의 feedback`
-
-*MAX와 MIN 값을 구하는 방법은 Math class에서 제공하는 함수를 사용할 수 있습니다.*
 
 ```java
 public class MaxMinExample {
@@ -1218,6 +1215,44 @@ class ArrayExe {
 }
 ```
 
+```java
+
+//배열과 반복문을 이용하여 금액을 입력 받아 필요한 화폐 단위의 개수를 구하라.
+
+import java.util.Scanner;
+
+class ArrayExe2 {
+
+	public static void main(String[] args) {
+
+		int price;
+		int money[] = { 50000, 10000, 1000, 500, 100, 50, 10, 1 };
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("금액을 입력하시오.");
+		price = sc.nextInt();
+		
+		for(int i = 0; i < money.length; i ++) {
+			
+			if(price / money[i] != 0) {
+				
+				System.out.println(money [i] + "원 짜리 : " + (price / money [i]) + "개" );
+				
+				price = (price % money [i]);
+			}
+		}
+		
+		sc.close();
+
+	}
+
+}
+```
+
+`친구의 feedback`
+
+*MAX와 MIN 값을 구하는 방법은 Math class에서 제공하는 함수를 사용할 수 있습니다.*
 *Math class에서 제공하는 max와 min 함수의 내부를 살펴보면 다음과 같은 코드로 이루어져 있습니다.*
 *코드를 작성하고, ctrl을 누른상태로 함수명을 클릭하면 내부 코드를 볼 수 있으니, 코드를 살펴보시기 바랍니다*
 ```java
