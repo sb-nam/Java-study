@@ -42,7 +42,32 @@
 
 [목차로](#목차)
 
+## 형변환
 
+```java
+
+//형변환 작은 범위 + 큰범위 계산시 자동으로 큰쪽으로 변환됨.
+
+public class TypeConversion {
+
+	public static void main(String[] args) {
+		
+		byte b = 127; // 현재 int 형 127. byte형 으로 바꾸고 싶다면 byte 표시가 필요.
+		int i = 100;
+		
+		System.out.println(b + i); // 227 
+		System.out.println(10 / 4); // int 형으로 계산 되어 2
+		System.out.println(10.0 / 4); // double형으로 계산 되어 2.5
+		System.out.println((char)0x12340041); // char형 A
+		System.out.println((byte)(b + i)); // 값이 짤려서 이상해짐 범위 벗어남.
+		System.out.println((int)2.9 + 1.8); // int 2 + doubel 1.8
+		System.out.println((int)(2.9 + 1.8)); // 2.9 + 1.8 = 4.7 - > int형으로 변환 4
+		System.out.println((int)2.9 + (int)1.8); // int 2 + int 1 = 3
+	
+	}
+
+}
+```
 
 
 
