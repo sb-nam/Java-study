@@ -2,6 +2,7 @@
 
 # 목차
 - [Java란 무엇인가](#Java란-무엇인가)
+- [형변환](#형변환)
 - [변수](#변수)
 - [String 연결](#String-연결)
 - [연산자](#연산자)
@@ -33,7 +34,7 @@
 - [StringBuilder와 StringBuffer 클래스](#StringBuilder와-StringBuffer-클래스)
 - [콘솔 출력](#콘솔-출력)
 
-
+- [연습 문제](#연습-문제)
 
 
 ## Java란 무엇인가
@@ -2563,5 +2564,174 @@ class StarPrint {
 - '%g' 출력의 대상에 따라서 %e 또는 %f 형태의 출력
 - '%s' 문자열 출력
 - %c' 문자 출력
+
+[목차로](#목차)
+
+
+## 연습문제
+
+```java
+
+//$1 = 1100, 원화를 입력받아 달러로 바꾸어 출력하라.
+
+import java.util.Scanner;
+
+public class DallorChange {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+					
+		System.out.println("원화를 입력하세요.");
+		int won = sc.nextInt();
+		double dallor = won / 1100;
+		
+		System.out.println(won + "원은 " + "$" + dallor + "입니다.");
+		
+		sc.close();
+	}
+
+}
+```
+
+```java
+// 정수 3개 입력 받아 중간 값 구하기.
+
+import java.util.Scanner;
+
+public class ScannerExe {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println(" 첫번째 정수를 입력하시오.");
+		int a = sc.nextInt();
+		
+		System.out.println(" 두번째 정수를 입력하시오.");
+		int b = sc.nextInt();
+		
+		System.out.println(" 세번째 정수를 입력하시오.");
+		int c = sc.nextInt();
+		
+		int result = 0;
+		if(a < b && b < c || c < b && b < a) {
+			
+			result = b;
+		}
+		if(b < a && a < c || c < a && a < b) {
+			
+			result = a;
+			
+		} 
+		if(a < c && c < b || b < c && c < a) {
+			
+			result = c;
+			
+		}
+		
+		System.out.println("중간 값은 : " + result);
+		
+
+		sc.close();
+	}
+
+}
+
+```
+
+```java
+
+// 2자리의 수 (10 ~ 99)를 입력 받고, 십의 자리와 1의 자리가 같은지 판별하라.
+
+import java.util.Scanner;
+
+public class ScannerExe2 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("10~99 사이의 숫자를 입력하시오.");
+		int num = sc.nextInt();
+		
+		if(num % 11 == 0) {
+			
+			System.out.println(" 10의 자리와 1의 자리가 같습니다.");
+		
+		} else {
+			
+			System.out.println(" 10의 자리와 1의 자리가 다릅니다.");
+		}
+
+		sc.close();
+	}
+
+}
+```
+```java
+
+//삼각형의 변의 길이를 나타내는 정수 3개를 입력받고 그 수로 삼각형을 만들수 있는지 판별하라.
+//삼각형이 되려면 두 변의 합이 다른 한 변보다 커야한다.
+
+import java.util.Scanner;
+
+public class ScannerExe3 {
+
+	public static void main(String[] args) {
+		
+		int temp;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("첫 번째 정수를 입력하시오.");
+		int a = sc.nextInt();
+		
+		System.out.println("두 번째 정수를 입력하시오.");
+		int b = sc.nextInt();
+		
+		System.out.println("세 번째 정수를 입력하시오.");
+		int c = sc.nextInt();
+
+		// a < b
+		if(a > b) {
+			
+			temp = a;
+			a = b;
+			b = temp;
+			
+		}
+		// a < c
+		if (a > c) {
+			
+			temp = a;
+			a = c;
+			c = temp;
+		
+		}
+		// b < c
+		if (b > c) {
+			
+			temp = b;
+			b = c;
+			c = temp;
+			
+		}
+		// 치환하여 c를 항상 제일크게 만듬. 삼각형의 가장 큰 변은 두수의 합보다 항상 커야 삼각형이 된다. 
+		if( (a + b) <= c) {
+			
+			System.out.println("삼각형이 안됩니다.");
+		
+		} else {
+			
+			System.out.println("삼각형이 됩니다.");
+		}
+		
+		sc.close();
+	}
+
+}
+
+```
 
 [목차로](#목차)
