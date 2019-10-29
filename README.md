@@ -34,7 +34,7 @@
 - [StringBuilder와 StringBuffer 클래스](#StringBuilder와-StringBuffer-클래스)
 - [콘솔 출력](#콘솔-출력)
 
-- [연습문제](#연습-문제)
+- [연습문제](#연습문제)
 
 
 ## Java란 무엇인가
