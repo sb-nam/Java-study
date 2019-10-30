@@ -857,6 +857,8 @@ public class Grading {
 			
 			System.out.println("학점은 : " + grade + "입니다.");
 		}
+		
+		sc.close();
 
 	}
 
