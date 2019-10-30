@@ -2903,4 +2903,72 @@ public class ScannerExe3 {
 
 ```
 
+```java
+
+import java.util.Scanner;
+
+public class RockScissorsPaper {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("철수의 가위, 바위, 보, 를 입력 하시오.");
+		String str1 = sc.next();
+		System.out.print("철수 >> " + str1 + " ,");
+		
+		System.out.println("영희의 가위, 바위, 보, 를 입력 하시오.");
+		String str2 = sc.next();
+		
+		if (str1.equals("가위")) { 
+				
+			if (str2.equals("가위"))
+				
+				System.out.println("비겼습니다.");
+			
+			else if (str2.equals("바위"))
+				
+				System.out.println("졌습니다.");
+			
+			else
+				
+				System.out.println("이겼습니다.");
+			 
+		} else if (str1.equals("바위")) {
+			
+			if (str2.equals("바위"))
+				
+				System.out.println("비겼습니다.");
+			
+			else if (str2.equals("가위"))
+				
+				System.out.println("이겼습니다.");
+			
+			else 
+				
+				System.out.println("졌습니다.");
+			
+		} else if (str1.equals("보")) {
+			
+			if (str2.equals("보"))
+				
+				System.out.println("비겼습니다.");
+			
+			else if (str2.equals("바위"))
+				
+				System.out.println("이겼습니다.");
+			
+			else 
+				
+				System.out.println("졌습니다.");
+		}
+			
+
+	}
+
+}
+
+```
+
+
 [목차로](#목차)
