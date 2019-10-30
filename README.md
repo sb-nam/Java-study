@@ -817,6 +817,53 @@ class WhileEx2 {
 
 ```
 
+```java
+
+import java.util.Scanner;
+
+public class Grading {
+
+	public static void main(String[] args) {
+		
+		char grade;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("점수를 입력 하시오.");
+		
+		while (sc.hasNext() ) {
+			
+			int score = sc.nextInt();
+			
+			if (score >= 90)  // score가 90 이상.
+				
+				grade = 'A';
+			
+			else if (score >= 80) // score가 80 이상.
+				
+				grade = 'B';
+			
+			else if (score >= 70) // score가 70 이상.
+				
+				grade = 'C';
+			
+			else if (score >= 60) // score가 60 이상.
+				
+				grade = 'D';
+			
+			else  // score가 60 미만.
+				
+				grade = 'F';
+			
+			System.out.println("학점은 : " + grade + "입니다.");
+		}
+
+	}
+
+}
+
+```
+
 
 [목차로](#목차)
 
