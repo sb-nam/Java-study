@@ -3049,4 +3049,119 @@ public class Game369 {
 
 ```
 
+```java 
+
+import java.util.Scanner;
+
+public class Calculation {
+
+	public static void main(String[] args) {
+
+		double num1, num2;
+		String sign;
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("숫자를 입력하세요.");
+		num1 = sc.nextDouble();
+
+		System.out.println("연산 식을 입력하시오.");
+		sign = sc.next();
+
+		System.out.println("숫자를 입력하세요.");
+		num2 = sc.nextDouble();
+
+		if (sign.equals("+"))
+
+			System.out.println(num1 + num2);
+
+		else if (sign.equals("-"))
+
+			System.out.println(num1 - num2);
+
+		else if (sign.equals("*"))
+
+			System.out.println(num1 * num2);
+
+		if (sign.equals("/")) {
+
+			if (num2 == 0) {
+				System.out.println("0으로 나눌수 없습니다.");
+				System.exit(0);
+			}
+			System.out.println(num1 / num2);
+
+		} else
+
+			System.out.println("잘못된 연산 입니다.");
+			
+		sc.close();	
+
+	}
+
+}
+
+
+
+
+```
+
+```java
+
+import java.util.Scanner;
+
+public class Calculation2 {
+
+	public static void main(String[] args) {
+
+		double num1, num2;
+		String sign;
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("연산 >> ");
+		num1 = sc.nextDouble();
+		sign = sc.next();
+		num2 = sc.nextDouble();
+
+		switch (sign) {
+
+		case "+":
+
+			System.out.println(num1 + num2);
+			break;
+
+		case "-":
+
+			System.out.println(num1 - num2);
+			break;
+
+		case "*":
+
+			System.out.println(num1 * num2);
+			break;
+
+		case "/":
+
+			if (num2 == 0) {
+						
+				System.out.println("0으로 나눌수 없습니다.");
+			    System.exit(0);
+				
+			}
+			System.out.println(num1 / num2);
+			break;
+		
+		default :
+			
+			System.out.println(" 잘못된 연산 입니다.");
+		}
+		
+		sc.close();
+	}
+
+}
+
+```
+
 [목차로](#목차)
