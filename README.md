@@ -9,6 +9,7 @@
 - [관계 연산자](#관계-연산자)
 - [논리 연산자](#논리-연산자)
 - [비트 연산자](#비트-연산자)
+- [시프트 연산자](#시프트-연산자)
 - [if문](#if문)
 - [삼항 연산자](#삼항-연산자)
 - [switch 와 break 문](#switch-와-break-문)
@@ -286,6 +287,48 @@ class GradeCard {
 - `^` 비트 단위로 XOR 연산을 한다. (n1 ^ n2) -> // * 두 비트의 값이 서로 다를 경우에만 1을 반환함.
 - `~` 피연산자의 모든 비트를 반전시켜서 얻은 결과를 반환함. (~n) <-
 
+
+[목차로](#목차)
+
+
+
+## 시프트 연산자
+
+-`a >> b` a의 각 비트를 오른쪽으로 b번 시프트한다. 취상위 비트는 시프트 전의 최상위 비트로 채운다.
+-`a >>> b` a의 각 비트를 오른쪽으로 b번 시프트한다. 최상위 비트의 빈자리는 항상 0으로 채운다.
+-`a << b` a의 각 비트를 왼쪽으로 b번 시프트한다. 최하위 비트의 빈자리는 항상 0으로 채운다.
+
+```java
+
+
+
+public class BitShiftOperator {
+
+	public static void main(String[] args) {
+		
+		short a = (short)0x55ff;
+		short b = 0x00ff;
+		
+		//비트 연산
+		System.out.printf("%x\n", a & b);
+		System.out.printf("%x\n", a | b);
+		System.out.printf("%x\n", a ^ b);
+		System.out.printf("%x\n", ~ a);
+		
+		byte c = 20; // 0x14
+		byte d = -8; // 0xf8
+		
+		//시프트 연산
+		System.out.println(c << 2); // c 를 왼쪽으로 2번 시프트
+		System.out.println(c >> 2); // c 를 오른쪽으로 2번 시프트
+		System.out.println(d >> 2); // d 를 오른쪽으로 2번 시프트
+		System.out.printf("%x\n", d >>> 2); // d를 오른쪽으로 2번 시프트
+	}
+
+}
+
+
+```
 
 [목차로](#목차)
 
