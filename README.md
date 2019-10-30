@@ -3010,4 +3010,43 @@ public class Season {
 }
 ```
 
+```java
+
+
+import java.util.Scanner;
+
+public class Game369 {
+
+	public static void main(String[] args) {
+
+		int num;
+		int count = 0;
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("1~99 사이의 정수를 입력하시오.");
+		num = sc.nextInt();
+			
+		if (num % 10 == 3 || num % 10 == 6 || num % 10 == 9) {
+
+			count++;
+		}
+		if (num / 10 == 3 || num / 10 == 6 || num / 10 == 9) 
+
+			count++;
+        
+		if (count == 2) 
+
+			System.out.println("박수 짝짝");
+		else
+
+			System.out.println("박수 짝");
+		
+		sc.close();
+	}
+
+}
+
+```
+
 [목차로](#목차)
