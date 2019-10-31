@@ -3456,4 +3456,91 @@ public class ReturnArray {
 
 ```
 
+```java
+
+
+public class Array2d {
+
+	public static void main(String[] args) {
+
+		int n[][] = { { 1 }, { 1, 2, 3 }, { 1 }, { 1, 2, 3, 4 }, { 1, 2 } };
+
+		for (int i = 0; i < n.length; i++) {
+
+			for (int j = 0; j < n[i].length; j++) {
+
+				System.out.print(n[i][j] + " " );
+			}
+
+			System.out.println();
+		}
+
+	}
+}
+
+```
+
+```java
+
+// abcde
+// abcd
+// abc           나오도록 출력하라.
+// ab
+// a
+
+import java.util.Scanner;
+
+public class ScannerChar {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+				
+		System.out.println("소문자 알파벳을 입력하시오.");
+		
+		String str = sc.next();
+		char ch = str.charAt(0);
+		
+		for(char i = ch; i >= 'a'; i--) { // ch를 1씩 낮추겠다
+			
+			for(char j = 'a'; j <= i; j++) { //j 값이 i를 따라가도록 낮춤.
+				
+				System.out.print(j);
+			}
+			
+			System.out.println();
+		}
+		
+	}
+}
+
+```
+
+```java
+
+// 4 x 4 2차원 배열을 만들고 1~10까지 범위의 정수를
+// 랜덤하게 생성하여 정수 16개를 배열에 저장하고
+// 2차원 배열을 화면에 출력하라.
+public class Array2dRandom {
+
+	public static void main(String[] args) {
+		
+		int arr[][] = new int[4][4];
+		
+		for(int i = 0; i < arr.length; i++) {
+			
+			for(int j = 0; j < arr[i].length; j ++) {
+				
+				arr[i][j] = (int)(Math.random() * 10 + 1);
+				System.out.print(arr[i][j] + " ");
+			}
+			
+			System.out.println();
+		}
+	}
+}
+
+```
+
+
 [목차로](#목차)
