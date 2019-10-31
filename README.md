@@ -3321,4 +3321,37 @@ public class ContinueExe {
 }
 ```
 
+```java
+
+
+import java.util.Scanner;
+
+public class ArrayExe {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		
+		int intArray[] = new int [5]; // 5개의 공간 생성
+		int max = -1;
+		
+		System.out.println("0 보다 큰 숫자 입력");
+		
+		for(int i = 0; i < 5; i++) {
+			
+			intArray[i] = sc.nextInt();
+			
+			if(intArray[i] > max) { // 현재 max보다 intArray가 클때
+				
+				max = intArray[i]; // intArray갑 max로 넣어줌
+			}
+			System.out.print("입력된 수에서 가장 큰 수는 " + max + " 입니다.");
+		}
+
+		sc.close();
+	}
+
+}
+
+```
 [목차로](#목차)
