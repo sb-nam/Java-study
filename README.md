@@ -911,6 +911,29 @@ public class Grading {
 ## do while 문
 
 ```java
+
+
+public class DoWhileSample {
+
+	public static void main(String[] args) {
+		
+		char a = 'a';
+		
+		do {
+			
+			System.out.print(a); // 작업문 
+			a = (char)(a + 1);   //
+			
+		} while (a <= 'z');  // 조건식
+
+	}
+
+}
+
+```
+
+
+```java
 class Tutorial {
     
     public static void main(String args[]) {
@@ -1663,6 +1686,33 @@ class SumOfInt {
 
 ## 반복문의 중첩
 - 가장 많이 등장하는 중첩은 for문의 중첩!
+
+```java
+
+
+public class NestedLoop {
+
+	public static void main(String[] args) {
+		
+				
+		for(int i = 1; i < 10; i++) { // 1단에서 9단
+			
+			for(int j =1; j < 10; j++) { // 각 단의 구구셈
+				
+				System.out.print(i + " * " + j + " = " + i * j); // 구구셈 출력
+				System.out.print('\t'); // 하나씩 탭으로 띄우기
+			
+			}
+			System.out.println(); // 한 단이 끝나면 줄 바꿈
+		}
+
+	}
+
+}
+
+
+```
+
 
 ```java
 class Tutorial {
@@ -3162,6 +3212,109 @@ public class Calculation2 {
 
 }
 
+```
+
+```java
+
+
+public class ForSample {
+
+	public static void main(String[] args) {
+		
+		int i, j;
+		
+		for (j = 0, i = 1; i <= 10; i++) {
+			
+			j = j + i;
+			
+			System.out.print(i);
+			
+			if (i == 10) {
+				
+				System.out.print(" = ");
+				System.out.print(j);
+			
+			} else
+				
+				System.out.print(" + ");
+		}
+
+	}
+
+}
+```
+
+```java
+
+import java.util.Scanner;
+
+public class WhileSample {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int count = 0; // count는 입력된 정수의 개수
+		double sum = 0; // sum은 합
+		
+		System.out.println("정수를 입력하고 마지막에 -1 을 입력하세요.");
+		int n = sc.nextInt(); // 정수 입력
+		
+		while (n != -1) { // -1 이 되면 while문을 벗어남
+			
+			sum = sum + n;
+			count++;
+			n = sc.nextInt(); //정수 입력
+		}
+		if (count == 0) {
+			
+			System.out.println("입력된 정수가 없습니다.");
+			
+		} else {
+			
+			System.out.print("정수의 개수는 " + count + " 개 이며 ");
+			System.out.println("평균은 " + (double)sum / count);
+		}
+		
+
+	}
+
+}
+```
+
+```java
+
+import java.util.Scanner;
+
+public class ContinueExe {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("정수를 5개 입력하세요.");
+		
+		int sum = 0;
+		
+		for(int i = 0; i <= 5; i++) {
+			
+			int n = sc.nextInt(); // 키보드에서 정수 입력
+			
+			if(n <= 0)
+				
+				continue; // 양수가 아닌경우 다음 반복으로 진행
+		
+			else
+				
+				sum = sum + n; // 양수인 경우 덧셈
+		}
+		
+		System.out.println("양수의 합은 : " + sum);
+
+		sc.close();
+	}
+
+}
 ```
 
 [목차로](#목차)
