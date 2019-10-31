@@ -3511,6 +3511,7 @@ public class ScannerChar {
 			System.out.println();
 		}
 		
+		sc.close();
 	}
 }
 
