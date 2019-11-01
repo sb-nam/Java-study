@@ -3584,6 +3584,56 @@ public class For369 {
 }
 ```
 
+```java
+
+//다음 코드와 같이 과목과 점수가 짝을 이루도록 2개의 배열을 작성하라.
+
+package Prcatice;
+
+import java.util.Scanner;
+
+public class ArrayScore {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		String course[] = { "Java", "C++", "HTML5", "컴퓨터구조", "안드로이드" };
+
+		int score[] = { 95, 88, 76, 62, 55 };
+
+		System.out.println("과목을 입력하세요.");
+		
+		while (true) {
+		
+			String name = sc.next();
+			
+			if(name.equals("그만"))
+				break;
+						
+			for(int i = 0; i < course.length; i ++) {
+				
+				if(course[i].equals(name)) {
+					
+					int n = score[i];
+					
+					System.out.println(course[i] + "의 점수는 " + score[i]);
+				
+				} else if (i == 4)
+					
+					System.out.println("과목이 없습니다.");
+			}
+			
+			sc.close();
+			
+		}
+
+	}
+
+}
+
+```
+
 [목차로](#목차)
 
 ## 예외처리
