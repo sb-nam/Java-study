@@ -3542,7 +3542,47 @@ public class Array2dRandom {
 }
 
 ```
+```java
 
+// 반복문을 이용하여 369 게임에서 1 부터 99 까지의
+// 박수 짝, 박수 짝짝을 출력하라
+package Prcatice;
+
+public class For369 {
+
+	public static void main(String[] args) {
+
+		int count = 0;
+
+		for (int i = 1; i < 100; i++) {
+
+			if (i % 10 == 3 || i % 10 == 6 || i % 10 == 9) {
+
+				count++;
+
+			}
+			if (i / 10 == 3 || i / 10 == 6 || i / 10 == 9) {
+
+				count++;
+
+			}
+			if (count == 1) {
+
+				System.out.println(i + " 박수 짝");
+
+			}
+
+			else if (count == 2) {
+
+				System.out.println(i + " 박수 짝짝");
+
+			}
+			count=0;
+		}
+	}
+
+}
+```
 
 [목차로](#목차)
 
