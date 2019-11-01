@@ -3549,6 +3549,96 @@ public class Array2dRandom {
 ## 예외처리
 
 
+```java
 
+package Exception;
+import java.util.Scanner;
+
+public class ExceptionExe {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int divisor = 0;
+		int dividend = 0;
+		
+		System.out.println("나뉨수를 입력하시오.");
+		dividend = sc.nextInt();
+		
+		System.out.println("나눗수를 입력하시오");
+		divisor = sc.nextInt();
+		
+		System.out.println(dividend + "을/를" + divisor + "로 나누면 몫은 " + dividend / divisor + "입니다.");
+	}
+
+}
+
+```
+
+```java
+
+package Exception;
+
+import java.util.Scanner;
+
+public class ExceptionExe_1 {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		int divisor = 0;
+		int dividend = 0;
+
+		System.out.println("나뉨수를 입력하시오.");
+		dividend = sc.nextInt();
+
+		System.out.println("나눗수를 입력하시오");
+		divisor = sc.nextInt();
+
+		try {
+
+			System.out.println(dividend + "을/를" + divisor + "로 나누면 몫은 " + dividend / divisor + "입니다.");
+		
+		} catch (java.lang.ArithmeticException e) {
+
+			System.out.println("0으로 나눌 수 없습니다.");
+		}
+	}
+
+}
+
+```
+
+```java
+
+
+package Exception;
+
+public class ArrayException {
+
+	public static void main(String[] args) {
+	
+		int intArray[] = new int[5];
+		
+		intArray[0] = 0;
+		
+		try {
+			for(int i = 0; i < 5; i ++) {
+				
+				intArray[i + 1] = i + 1 + intArray[i];
+				
+				System.out.println("intArray["+ i + "]" + "=" + intArray[i]);
+			}
+		} catch(ArrayIndexOutOfBoundsException e) {
+			
+			System.out.println("배열의 인덱스가 범위를 벗어낫습니다.");
+		}
+
+	}
+
+}
+```
 
 [목차로](#목차)
