@@ -35,8 +35,8 @@
 - [String 클래스](#String-클래스)
 - [StringBuilder와 StringBuffer 클래스](#StringBuilder와-StringBuffer-클래스)
 - [콘솔 출력](#콘솔-출력)
-
 - [연습문제](#연습문제)
+- [예외처리](#예외처리)
 
 
 ## Java란 무엇인가
@@ -3542,6 +3542,13 @@ public class Array2dRandom {
 }
 
 ```
+
+
+[목차로](#목차)
+
+## 예외처리
+
+
 
 
 [목차로](#목차)
