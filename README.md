@@ -3755,6 +3755,49 @@ public class MyExp_Exe {
 }
 ```
 
+```java
+
+// 클래스 Triangle을 작성하라. Triangle은 밑변과 높이의 두 실수 필드를 가지며
+// 각각 width,height 변수를 가진다. width와 height는 양수만읠 가지며 넓이를 
+// 리턴하는 getArea() 메소드를 가진다. [ 삼각형의 넓이 : 밑변 x 높이 /2]
+// 밑변 4.8 , 높이 3.4
+package Prcatice;
+
+public class Triangle {
+
+	double width;
+	double height;
+	
+	public Triangle(double width , double height) {
+		
+		this.width = width;
+		this.height = height;
+		
+	}
+	public double getArea() {
+		
+		return width * height / 2;
+	}
+}
+```
+
+```java
+
+package Prcatice;
+
+public class TriangleExe {
+
+	public static void main(String[] args) {
+
+		Triangle tri = new Triangle(4.8 , 3.4);
+		
+		System.out.println("삼각형의 넓이는 : " + tri.getArea() );
+	}
+
+}
+
+```
+
 [목차로](#목차)
 
 ## 예외처리
