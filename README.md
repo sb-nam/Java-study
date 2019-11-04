@@ -3679,6 +3679,39 @@ public class ArrayScore {
 
 ```
 
+```java
+
+//Goods 클래스를 만들고 String name;int price;
+//int numberOfStock,int sold; 타입의 필드를 만들고 
+//클래스 안에 메인 함수를 만든뒤 출력하라.
+package Prcatice;
+
+public class Goods {
+
+	public String name;
+	public int price;
+	public int numberOfStock;
+	public int sold;
+
+	public static void main(String[] args) {
+		
+		Goods camera = new Goods();
+		
+		camera.name = "Samsung";
+		camera.price = 400000;
+		camera.numberOfStock = 30;
+		camera.sold = 50;
+		
+		System.out.println("상품이름 : " + camera.name);
+		System.out.println("가격 : " + camera.price);
+		System.out.println("재고 : " + camera.numberOfStock);
+		System.out.println("판매량 : " + camera.sold);
+	}
+	
+}
+
+```
+
 [목차로](#목차)
 
 ## 예외처리
