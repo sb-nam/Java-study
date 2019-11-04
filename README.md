@@ -2228,6 +2228,51 @@ class Tutorial {
 
 ```java
 
+package Prcatice;
+
+public class Circle {
+
+	public int radius; // 원의 반지름.
+	public String name; // 원의 이름.
+	
+	public Circle() { // 원의 생성자 메소드.
+		
+		
+	}
+	public double getArea() { // 원의 면적 계산 메소드.
+		
+		return 3.14 * radius * radius;
+	}
+
+	
+}
+```
+
+```java
+
+package Prcatice;
+
+public class CircleExe {
+
+	public static void main(String[] args) {
+		
+		Circle pizza;         // Circle 객체에 대한 래퍼런스 변수.
+		pizza = new Circle(); // Circle 객체 생성.
+		
+		pizza.radius = 10; // radius 필드에 10 저장.
+		pizza.name = "자바피자"; // name 필드에 "자바피자" 저장.
+		pizza.getArea(); // pizza 객체의 면적 알아내기.
+		
+		System.out.println("피자의 넓이는 " + pizza.getArea() );
+
+	}
+
+}
+
+```
+
+```java
+
 class Student {
 	
 	String name;
