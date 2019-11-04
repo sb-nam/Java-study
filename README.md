@@ -3712,6 +3712,49 @@ public class Goods {
 
 ```
 
+```java
+
+//클래스 MyExp를 작성하라 . 지수값을 표현하는 클래스로서 두개의 정수형 맴버 필드
+//base와 exp를 가진다. base 와 exp는 양의 정수만을 가지는것으로 가정한다.
+//정수값을 리턴 하는 getValue() 라는 메소드를 제공한다.
+
+package Prcatice;
+
+public class MyExp {
+
+	public int base;
+	public int exp;
+	
+	public MyExp(int base, int exp) {
+		
+		this.base = base;
+		this.exp = exp;
+		
+	}
+	public int getValue() {
+		
+		return (int) Math.pow(base, exp);
+	}
+	
+}
+```
+```java
+
+package Prcatice;
+
+public class MyExp_Exe {
+
+	public static void main(String[] args) {
+
+		MyExp exp = new MyExp(2, 3);
+
+		System.out.println(exp.base + "의 " + exp.exp + "승은 " + exp.getValue());
+
+	}
+
+}
+```
+
 [목차로](#목차)
 
 ## 예외처리
