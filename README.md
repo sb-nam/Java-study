@@ -3798,6 +3798,92 @@ public class TriangleExe {
 
 ```
 
+```java
+
+// Circle 클래스와 CircleManager 클래스를 완성하라.
+// x, y, radius 값을 읽어 3개의 Circle 객체를 만들고 show() 이용하여 이들을 모두 출력하라.
+package Prcatice;
+
+import java.util.Scanner;
+
+class Circle {
+
+	private double x, y;
+	private int radius;
+
+	public Circle(double x, double y, int radius) {
+
+		this.x = x;
+		this.y = y;
+		this.radius = radius;
+
+	}
+
+	public void show() {
+
+		System.out.println("(" + x + ", " + y + ")" + radius);
+
+	}
+
+	public int radius() {
+
+		return radius;
+
+	}
+
+}
+
+public class CircleManager {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		Circle c[] = new Circle[3];
+
+		int max = 0;
+
+		for (int i = 0; i < c.length; i++) {
+
+			System.out.print("x, y, radius >>");
+
+			double x = sc.nextDouble();
+			double y = sc.nextDouble();
+			int radius = sc.nextInt();
+
+			c[i] = new Circle(x, y, radius);
+		}
+
+		for (int i = 0; i < c.length; i++) {
+
+			c[i].show();
+
+		}
+		for (int i = 0; i < c.length; i++) {
+
+			if (max < c[i].radius()) {
+				max = c[i].radius();
+
+			}
+		}
+		for (int i = 0; i < c.length; i++) {
+
+			if (max == c[i].radius()) {
+
+				System.out.print("가장큰 면적의 원은 : ");
+				c[i].show();
+
+			}
+
+		}
+
+		sc.close();
+	}
+
+}
+```
+
+
 [목차로](#목차)
 
 ## 예외처리
