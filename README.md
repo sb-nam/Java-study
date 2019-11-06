@@ -3884,6 +3884,113 @@ public class CircleManager {
 ```
 
 
+`친구의 Feedback`
+
+*위의 코드를 보면, 코드가 한 곳에 밀집되어 있습니다.*
+*코드들의 역할을 함수로 분리하는 것이 좋아보입니다.*
+
+```java
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        CircleManager circleManager = new CircleManager();
+        circleManager.createCircle(3);
+        circleManager.showHasCirclesInfo();
+        circleManager.showInfoOfMaxRadiusCircle();
+    }
+}
+
+class CircleManager {
+
+    private Circle[] circles;
+
+    public void createCircle(int needCircleCount) {
+        // scanner를 사용하다가 에러가 발생될 것을 대비해 try catch 문을 사용할 수 있습니다.
+        Scanner sc = null;
+        try { 
+            sc = new Scanner(System.in);
+
+            circles = new Circle[needCircleCount];
+            for(int i=0; i<needCircleCount; i++) {
+                System.out.println("x, y, getRadius >>");
+                double x = sc.nextDouble();
+                double y = sc.nextDouble();
+                int radius = sc.nextInt();
+                circles[i] = new Circle(x, y, radius);
+            }
+        } catch (Exception e) {
+            System.out.print("circle create fail : " + e.getMessage());
+            circles = null;
+        } finally {
+            if(sc != null) {
+                sc.close();
+            }
+        }
+    }
+
+    public void showHasCirclesInfo() {
+        if(circles != null) {
+            for(int i=0; i<circles.length; i++) {
+                System.out.println(i + " index circle info : " + circles[i]);
+            }
+        } else {
+            System.out.println("not has circles");
+        }
+    }
+
+    public void showInfoOfMaxRadiusCircle() {
+        Circle maxRadiusCircle = getMaxRadiusCircleInCircles();
+        if(maxRadiusCircle != null) {
+            System.out.println("max radius circle info : " + maxRadiusCircle);
+        } else {
+            System.out.println("not has circles");
+        }
+    }
+
+    private Circle getMaxRadiusCircleInCircles() {
+        if(circles != null) {
+            int maxRadiusOfCircles = circles[0].getRadius();
+            int maxRadiusCircleIndex = 0;
+            for(int i=1; i<circles.length; i++) {
+                int radiusOfCurrentCircle = circles[i].getRadius();
+                if(maxRadiusOfCircles < radiusOfCurrentCircle) {
+                    maxRadiusOfCircles = radiusOfCurrentCircle;
+                    maxRadiusCircleIndex = i;
+                }
+            }
+
+            return circles[maxRadiusCircleIndex];
+        } else {
+            return null;
+        }
+    }
+}
+
+class Circle {
+    private double x, y;
+    private int radius;
+
+    public Circle(double x, double y, int radius) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+    }
+
+    public int getRadius() {
+        return radius;
+    }
+
+    @Override
+    public String toString() {
+        return"(" + x + ", " + y + ")" + radius;
+    }
+}
+
+```
+
+
 [목차로](#목차)
 
 ## 예외처리
