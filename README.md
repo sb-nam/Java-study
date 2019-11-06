@@ -3989,6 +3989,52 @@ class Circle {
 }
 
 ```
+```java
+
+//2개의 static을 가진 ArrayUtil 클래스를 만들어보자. concat() 와 print()
+//를 작성하여 ArrayUtil 클래스를 완성하라.
+
+package Prcatice;
+
+class ArrayUtill {
+
+	public static int [] concat(int[] a, int [] b) {
+	
+		int [] arr= new int [a.length + b.length];
+		
+		for(int i = 0; i < a.length; i ++) {
+			
+			arr[i] = a[i];
+		}
+		for(int j = a.length; j < a.length + b.length; j++) {
+			
+			arr[j] = b[j - a.length];
+		}
+	
+		return arr;
+	}
+	
+	public static void print(int [] a) {
+		
+		for(int i = 0; i < a.length; i ++) {
+			
+			System.out.print(a[i] + " ");
+		}
+		
+	}
+}
+
+public class StaticEx {
+	
+	public static void main(String [] args) {
+		
+		int [] array1 = { 1, 5, 7, 9 };
+		int [] array2 = { 3, 6, -1, 100, 77 }; 
+		int [] array3 = ArrayUtill.concat(array1, array2);
+		ArrayUtill.print(array3);
+	}
+}
+```
 
 
 [목차로](#목차)
