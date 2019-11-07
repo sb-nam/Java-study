@@ -4107,6 +4107,139 @@ public class DicApp {
 
 ```
 
+```java
+
+//다수의 클래스를 만들고 활용하는 연습하기.
+//더하기 빼기 곱하기 나누기를 수행하는 각 클래스를 만들자.
+
+package Prcatice;
+
+import java.util.Scanner;
+
+public class Calculation {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		int a, b;
+		String s;
+
+		System.out.print("두 정수와 연산자를 입력하시오 >> ");
+		a = sc.nextInt();
+		b = sc.nextInt();
+		s = sc.next();
+
+		switch(s) {
+		
+		case "+" :
+			
+			Add add = new Add();
+			add.setValue(a, b);
+			System.out.println(add.calculate());
+			break;
+		
+		case "-" :
+			
+			Sub sub = new Sub();
+			sub.setValue(a, b);
+			System.out.println(sub.calculate());
+			break;
+			
+		case "*" :
+			
+			Mul mul = new Mul();
+			mul.setValue(a, b);
+			System.out.println(mul.calculate());
+			break;
+		
+		case "/" :
+			
+			Div div = new Div();
+			div.setValue(a, b);
+			System.out.println(div.calculate());
+			break;
+			
+		default	: System.out.println("잘못 입력 하셨습니다.");
+		}
+	}
+
+}
+
+class Add {
+
+	int a;
+	int b;
+
+	void setValue(int a, int b) {
+
+		this.a = a;
+		this.b = b;
+	}
+
+	public int calculate() {
+
+		return a + b;
+
+	}
+}
+
+class Sub {
+
+	int a;
+	int b;
+
+	void setValue(int a, int b) {
+
+		this.a = a;
+		this.b = b;
+	}
+
+	public int calculate() {
+
+		return a - b;
+
+	}
+}
+
+class Mul {
+
+	int a;
+	int b;
+
+	void setValue(int a, int b) {
+
+		this.a = a;
+		this.b = b;
+	}
+
+	public int calculate() {
+
+		return a * b;
+
+	}
+}
+
+class Div {
+
+	int a;
+	int b;
+
+	void setValue(int a, int b) {
+
+		this.a = a;
+		this.b = b;
+	}
+
+	public int calculate() {
+
+		return a / b;
+
+	}
+}
+
+```
+
 
 
 [목차로](#목차)
