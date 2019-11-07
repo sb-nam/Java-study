@@ -3069,6 +3069,25 @@ public class RockScissorsPaper {
 
 ```
 
+`친구의 피드백`
+*코드를 보면, 문자열을 비교할 때 `equals` 함수를 사용하고 있습니다.*
+*왜 `equals`를 사용할까요? `==`을 사용하면 안될까요?*
+*다음의 코드는 둘다 동일하게 `true`가 나옵니다.*
+*`equals`를 사용해야 하는 이유에 대해 생각해보면 좋을 것 같습니다.*
+```java
+class Main {
+    public static void main(String[] args) {
+    	String text1 = "a";
+	String text2 = "a";
+	
+	System.out.println(text1 == text2); // true
+	System.out.println(text1.equals(text2)); // true
+    }
+}
+```
+
+
+
 ```java
 
 import java.util.Scanner;
