@@ -4036,6 +4036,78 @@ public class StaticEx {
 }
 ```
 
+```java
+
+package Prcatice;
+
+import java.util.Scanner;
+
+class Dictionary {
+
+	private static String[] kor = { "사랑", "아기", "돈", "미래", "희망" };
+	private static String[] eng = { "love", "baby", "money", "future", "hope" };
+
+	public static String kor2eng(String word) {
+
+		Scanner sc = new Scanner(System.in);
+
+		for (int i = 0; i < kor.length; i++) {
+
+			if(word.equals(kor[i])) {
+				
+				return eng[i];
+			}
+			
+			
+		}
+		return null;
+
+	}
+}
+
+public class DicApp {
+
+		Scanner sc = new Scanner(System.in);
+		
+		String word;
+		
+		public void run() {
+			
+			while(true) {
+				
+				System.out.print("한글단어?");
+				word = sc.next();
+				
+				if(word.equals("그만"));
+				
+				String result = Dictionary.kor2eng(word);
+				
+				if(result == null) {
+					
+					System.out.println(word + " 은/는 제사전에 없습니다.");
+				
+				} else {
+					
+					System.out.println(word + " 은/는 " + result );
+				}
+			}
+		}
+
+		public static void main(String [] args) {
+			
+			DicApp da = new DicApp();
+			
+			System.out.println("한영 검색 프로그램 입니다.");
+			
+			da.run();
+		}
+		
+	
+}
+
+```
+
+
 
 [목차로](#목차)
 
