@@ -4259,6 +4259,54 @@ class Div {
 
 ```
 
+```java
+
+package Practice2;
+
+class Tv {
+
+	private int size;
+
+	public Tv(int size) {
+
+		this.size = size;
+	}
+
+	protected int getSize() {
+
+		return size;
+	}
+}
+//-------------------------------------------------------------------------------------
+
+class ColorTv extends Tv {
+
+	int color;
+
+	public ColorTv(int i, int j) {
+		super(i);
+		this.color = j;
+	}
+
+	void printProperty() {
+
+		System.out.println(getSize() + "인치 " + color + "컬러");
+
+	}
+}
+
+public class Run {
+	public static void main(String[] args) {
+
+		ColorTv myTv = new ColorTv(32, 1024);
+
+		myTv.printProperty();
+
+	}
+
+}
+
+```
 
 
 [목차로](#목차)
