@@ -4261,6 +4261,160 @@ class Div {
 
 ```java
 
+// 숫자야구게임 선생님 풀이
+
+package Game;
+
+import java.util.Scanner;
+
+class BaseballNumber {
+
+   int[] random;
+
+ 
+
+   public BaseballNumber() {
+
+      random = new int[3];
+
+      do {
+
+         random[0] = (int) (Math.random() * 10);
+
+         random[1] = (int) (Math.random() * 10);
+
+         random[2] = (int) (Math.random() * 10);
+
+      } while (random[0] == random[1] || random[0] == random[2] || random[1] == random[2]);
+
+   }
+
+ 
+
+   public void showNumber() {
+
+      System.out.print("컴퓨터 발생 수 : ");
+
+      System.out.print(random[0] + " " + random[1] + " " + random[2]);
+
+   }
+
+ 
+
+   public int resultStrike(int[] userNum) {
+
+      int strike = 0;
+
+      if (random[0] == userNum[0])
+
+         strike++;
+
+      if (random[1] == userNum[1])
+
+         strike++;
+
+      if (random[2] == userNum[2])
+
+         strike++;
+
+      return strike;
+
+   }
+
+ 
+
+   public int resultBall(int[] userNum) {
+
+      int ball = 0;
+
+      if (random[0] == userNum[1] || random[0] == userNum[2])
+
+         ball++;
+
+      if (random[1] == userNum[0] || random[1] == userNum[2])
+
+         ball++;
+
+      if (random[2] == userNum[0] || random[2] == userNum[1])
+
+         ball++;
+
+      return ball;
+
+   }
+
+}
+
+ 
+
+public class BaseballGame {
+
+ 
+
+   public static void main(String[] args) {
+
+      Scanner sc = new Scanner(System.in);
+
+      BaseballNumber number = new BaseballNumber();
+
+      int userNum[] = new int[3];
+
+      int count = 5, strike, ball; // 전체 기회. 5번 안에 못맞추면 종료한다.
+
+      System.out.println("숫자야구게임 시작");
+
+      number.showNumber();
+
+      while (count >= 1) {
+
+         System.out.print("\n새 개의 수 순서대로 입력 (중복숫자 입력 금지) >> ");
+
+         for (int i = 0; i < userNum.length; i++)
+
+            userNum[i] = sc.nextInt();
+
+         if (userNum[0] == userNum[1] || userNum[0] == userNum[2] || userNum[1] == userNum[2]) {
+
+            System.out.println("중복숫자 입력하였습니다. 다시 입력하세요. \n");
+
+            continue;
+
+         }
+
+         strike = number.resultStrike(userNum);
+
+         ball = number.resultBall(userNum);
+
+         System.out.println(strike+" Strike "+ball+" Ball");
+
+         if (strike == 3) {
+
+            System.out.println("맞추셨습니다.(짝짝짝!) \n");
+
+            break;
+
+         }
+
+         count--;
+
+         System.out.println("기회는" + count + "번 남았습니다. \n");
+
+      }
+
+ 
+
+      System.out.println("게임종료!");
+
+   }
+
+ 
+
+}
+
+```
+
+```java
+
 package Practice2;
 
 class Tv {
