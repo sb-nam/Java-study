@@ -4462,6 +4462,73 @@ public class Run {
 
 ```
 
+```java
+
+package Practice2;
+
+class Tv {
+
+	private int size;
+
+	public Tv(int size) {
+
+		this.size = size;
+	}
+
+	protected int getSize() {
+
+		return size;
+	}
+}
+//-------------------------------------------------------------------------------------
+
+class ColorTv extends Tv {
+
+	int color;
+
+	public ColorTv(int size, int color) {
+		super(size);
+		this.color = color;
+	}
+
+	void printProperty() {
+
+		System.out.println(getSize() + "인치 " + color + "컬러");
+
+	}
+}
+//-------------------------------------------------------------------------------------
+class IPTV extends ColorTv {
+
+	private String ip;
+	
+	public IPTV(String ip, int size, int color) {
+		super(size,color);
+		this.ip = ip;
+	}
+	public String getIp() {
+		
+		return ip;
+	}
+	void printProperty() {
+		
+		System.out.println("나의 IPTV는 " + getIp() + " 주소의 " + getSize() + "인치 " + color + "컬러");
+	}
+	
+	
+}
+public class Run {
+	public static void main(String[] args) {
+
+		IPTV iptv = new IPTV("192.1.1.2" , 32, 1024);
+
+	    iptv.printProperty();
+
+	}
+
+}
+
+```
 
 [목차로](#목차)
 
