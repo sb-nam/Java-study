@@ -4606,36 +4606,33 @@ public class Won2DollarExe {
 ```
 ```java
 
-package Practice2;
+package Practice;
 
 class Pen {
-	
-	private int amount; // 남은양
-	public int getAmount() { return amount; }
-	public void setAmount(int amount) { this.amount = amount; }
-	
-	
+    private int amount; // 남은양
 
-}
+    public int getAmount() {
+        return amount;
+    }
 
-class SharpPencil extends Pen {
-	
-	private int width; // 샤프의 굵기
-	
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
 }
 
 class BallPen extends Pen {
-	
-	private String color; // 볼펜의 색
-	public String getColor() { return color; }
-	public void setColor(String color) { this.color = color; }
-	
+    private String color; // 볼펜의 색
+    public String getColor() { return color; }
+    public void setColor(String color) { this.color = color; }
 }
 
 class FountainPen extends BallPen{
-	
-	public void refill(int n) { setAmount(n); }
-	//                             
+
+    public void refill(int n) {
+        
+        setAmount(n);
+    }
+
 }
 
 ```
