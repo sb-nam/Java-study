@@ -4834,6 +4834,107 @@ class Point3DRun {
 
 ```
 
+```java
+
+package Practice2;
+  
+public class Account {
+
+	private String name;
+	private String accNum;
+	private String pwd;
+	protected int balance;
+	
+	public Account(String accountNo, String accNum, String pwd, int balance) {
+		
+		this.name = accountNo;
+		this.accNum = accNum;
+		this.pwd = pwd;
+		this.balance = balance;
+	}
+	
+	public void deposit(int money) {
+		
+		balance += money;
+	}
+	
+	public int withdraw(int money) {
+		
+		balance -= money;
+		
+		if(balance < money) {
+			System.out.println("금액이 부족합니다.");
+			return 0;
+		}
+		return money;
+	}
+	
+	public int getBalance() {
+		
+		return balance;
+	}
+	public void showAccount() {
+		
+		System.out.println("이름 : " + accNum);
+		System.out.println("잔액 : " + balance);
+	}
+	
+	
+}
+
+```
+```java
+package Practice2;
+
+class CreditLineAccount extends Account {
+
+	int creditLine; // 신용에 따른 출금 가능금액.
+
+	public CreditLineAccount(String accountNo, String accNum, String pwd, int balance, int creditLine) {
+		super(accountNo, accNum, pwd, balance);
+
+		this.creditLine = creditLine;
+	}
+
+	public int withdraw(int money) { // 메소드 오버라이딩
+
+		int withdrawMoney = getBalance() + creditLine;
+		if (withdrawMoney < money) {
+
+			System.out.println("출금 불가!");
+			return 0;
+		}
+		
+        balance -= money;
+		return money;
+
+	}
+
+	public void showAccount() {
+		super.showAccount();
+		
+		System.out.println("출금 가능 금액 : " + (getBalance() + creditLine));
+	}
+}
+```
+```java
+package Practice2;
+
+public class AccExe {
+
+	public static void main(String[] args) {
+		
+		CreditLineAccount hong = new CreditLineAccount("111-411-511-000", "홍길동", "1234", 400000, 10000000);
+		
+		hong.deposit(800000);
+		hong.withdraw(10000000);
+		hong.showAccount();
+
+	}
+
+}
+```
+
 
 [목차로](#목차)
 
