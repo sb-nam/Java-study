@@ -5089,51 +5089,84 @@ package EXEX;
 
 abstract class PairMap {
 
-	protected String keyArray []; // key들을 저장하는 배열.
-	
-	protected String valueArray []; // value 들을 저장하는 배열.
-	
+	protected String keyArray[]; // key들을 저장하는 배열.
+
+	protected String valueArray[]; // value 들을 저장하는 배열.
+
 	abstract String get(String key); // key 값을 가진 value 리턴. 없으면 null리턴
-	
+
 	abstract void put(String key, String value);// key와 value를 쌍으로 저장. 기존에
-                                                // key가 있으면, 값을 value로 수정.
-	
+												// key가 있으면, 값을 value로 수정.
+
 	abstract String delete(String key); // key 값을 가진 아이템(value와 함께) 삭제.
-                                        // 삭제된 value값 리턴.
-	
+										// 삭제된 value값 리턴.
+
 	abstract int length(); // 현재 저장된 아이템의 개수 리턴.
 }
 
 class Dictionary extends PairMap {
 
+	int set;
+
 	protected Dictionary(int num) {
 
-	
+		keyArray = new String[num];
+		valueArray = new String[num];
+		this.set = 0;
 	}
 
 	@Override
-	String get(String key) { 
-		
+	String get(String key) {
+
+		for (int i = 0; i < keyArray.length; i++) {
+
+			if (key.equals(keyArray[i])) {
+
+				return valueArray[i];
+			}
+		}
 		return null;
-	}	
-	@Override
-	void put(String key, String value) { 
-		
 	}
+
 	@Override
-	String delete(String key) { 
-		
+	void put(String key, String value) {
+
+		for (int i = 0; i < keyArray.length; i++) {
+
+			if (key.equals(keyArray[i])) {
+				keyArray[i] = key;
+				valueArray[i] = value;
+				return;
+			}
+		}
+		keyArray[set] = key;
+		valueArray[set] = value;
+		set++;
+	}
+
+	@Override
+	String delete(String key) {
+
+		for (int i = 0; i < keyArray.length; i++) {
+
+			if (key.equals(keyArray[i])) {
+				String s = valueArray[i];
+				keyArray[i] = null;
+				valueArray[i] = null;
+				return s;
+			}
+		}
 		return null;
 	}
 
 	@Override
 	int length() {
-		return 0;  
+		return set;
 
-	}	
-	
+	}
 
 }
+
 
 ```
 
