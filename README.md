@@ -5317,6 +5317,115 @@ public class StackApp {
 
 ```
 
+```java
+
+package Interface;
+
+abstract class Calc {
+
+	int a;
+	int b;
+	void setValue(int a, int b) {
+		
+		this.a = a;
+		this.b = b;
+	}
+	
+	abstract int calculate();
+}
+
+class Add extends Calc {
+
+	@Override
+	int calculate() {
+		
+		return a + b;
+	}
+	
+	
+}
+
+class Sub extends Calc {
+
+	@Override
+	int calculate() {
+		
+		return a - b;
+	}
+	
+}
+
+class Mul extends Calc {
+
+	@Override
+	int calculate() {
+		
+		return a * b;
+	}
+	
+}
+
+class Div extends Calc {
+
+	@Override
+	int calculate() {
+		
+		return a / b;
+	}
+	
+}
+
+```
+
+```java
+
+package Interface;
+
+import java.util.Scanner;
+
+public class CalcRun {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		
+		int result = 0;
+		
+		System.out.print("두 정수와 연산자를 입력하시오.");
+		
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		String s = sc.next();
+
+		Calc cal = null;
+		
+		switch(s) {
+		
+		case "+" :
+			cal = new Add();
+			break;
+		case "-" :
+			cal = new Sub();
+			break;
+		case "*" : 
+			cal = new Mul();
+			break;
+		case "/" :
+			cal = new Div();
+			break;
+		default : System.out.println("잘못된 연산자 입니다.");
+		}
+		cal.setValue(a, b);
+		result = cal.calculate();
+		System.out.println(result);
+		sc.close();
+		
+	}
+		
+}
+
+```
+
 
 
 [목차로](#목차)
