@@ -5196,6 +5196,127 @@ public class DictionaryApp {
 
 ```
 
+```java
+
+//Stack 인터페이스를 상속받아 실수를 저장하는 StringStack 클래스를 구현하라.
+//그리고 StackApp 클래스에 main()메소드를 작성하라.
+
+package Interface;
+
+import java.util.Scanner;
+
+interface Stack {
+
+	int length(); // 현재 스택에 저장된 개수 리턴.
+
+	int capacity(); // 스택의 전체 저장 가능한 개수 리턴.
+
+	String pop(); // 스택의 톱(top)에 실수 저장.
+
+	boolean push(String val); // 스택의 톱(top)에 저장된 실수 리턴.
+
+}
+
+class StringStack implements Stack {
+
+	int num;
+	int index;
+	String stack[];
+
+	public StringStack(int num) {
+
+		this.num = num;
+		this.index = 0;
+		stack = new String[num];
+	}
+
+	@Override
+	public int length() {
+
+		return index;
+	}
+
+	@Override
+	public int capacity() {
+
+		return stack.length;
+	}
+
+	@Override
+	public String pop() {
+
+		if (index - 1 < 0) {
+
+			return null;
+		}
+
+		index--;
+
+		String s = stack[index];
+		return s;
+	}
+
+	@Override
+	public boolean push(String val) {
+
+		if (index < num) {
+
+			stack[index] = val;
+			index++;
+
+			return true;
+
+		} else
+
+			return false;
+	}
+
+}
+
+public class StackApp {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("총 스택 저장 공간의 크기 입력 >>");
+
+		int num = sc.nextInt();
+
+		StringStack ss = new StringStack(num);
+
+		while (true) {
+
+			System.out.print("문자열 입력 >>");
+			String val = sc.next();
+
+			if (val.equals("그만")) {
+
+				break;
+			}
+			if (!ss.push(val)) {
+
+				System.out.println("스택이 꽉 차서 푸시 불가!");
+			}
+		}
+
+		System.out.print("스택에 저장된 모든 문자열 팝 : ");
+
+		int len = ss.length();
+
+		for (int i = 0; i < len; i++) {
+
+			String s = ss.pop();
+			System.out.print(s + " ");
+		}
+		sc.close();
+
+	}
+
+}
+
+```
+
 
 
 [목차로](#목차)
