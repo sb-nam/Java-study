@@ -5482,6 +5482,83 @@ class ShapeRun {
 
 ```
 
+```java
+
+package EXEX;
+
+class Over implements Shape2{
+
+	int i, j;
+	public Over(int i, int j) {
+		
+		this.i = i;
+		this.j = j;
+	}
+
+	@Override
+	public void draw2() {
+	
+		System.out.println(i + " x " + j +"에 내접하는 타원 입니다.");
+	}
+
+	@Override
+	public double getArea() {
+		
+		return i * j * PI;
+	}
+
+}
+
+class Rect2 implements Shape2 {
+
+	int i, j;
+	
+	public Rect2(int i, int j) {
+		
+		this.i = i;
+		this.j = j;
+	}
+
+	@Override
+	public void draw2() {
+
+        System.out.println(i + " x " + j +"크기의 사각형 입니다.");
+ 		
+	}
+
+	@Override
+	public double getArea() {
+		
+		return i * j;
+	}
+	
+}
+
+public class Shape2_Run {
+
+	public static void main(String[] args) {
+		
+		Shape2 [] list = new Shape2[3];
+		list [0] = new Circle2(10);
+		list [1] = new Over(20, 30);
+		list [2] = new Rect2(10, 40);
+		
+		for(int i = 0; i < list.length; i++) {
+			
+			list[i].redraw();
+		}
+		for(int i = 0; i < list.length; i++) {
+			
+			System.out.println("면적은 " + list[i].getArea());
+		}
+
+	}
+
+}
+
+```
+
+
 
 
 [목차로](#목차)
