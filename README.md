@@ -2871,6 +2871,129 @@ public class ObjectProperty {
 
 ```
 
+```java
+
+package TheHuman;
+
+class Point {
+	int x, y;
+
+	public Point(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+
+	public String toString() {
+		return "Point(" + x + ", " + y + ")";
+	}
+}
+
+public class ObjectProperty {
+
+	public static void main(String[] args) {
+
+		Point p = new Point(2, 3);
+
+		System.out.println(p.toString());
+		System.out.println(p);
+		System.out.println(p + "입니다.");
+	}
+
+}
+```
+
+```java
+package TheHuman;
+
+class Point1 {
+	int x, y;
+	
+	public Point1(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+	
+	public boolean equals(Object obj) {
+		Point1 p = (Point1)obj;
+		
+		if(x == p.x && y == p.y) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}
+
+public class EqualsEx {
+
+	public static void main(String[] args) {
+		Point1 a = new Point1(2,3);
+		Point1 b = new Point1(2,3);
+		Point1 c = new Point1(3,4);
+		
+		if(a == b) {
+			System.out.println("a == b");
+		}
+		if(a.equals(b)) {
+			System.out.println("a is equal to b");
+		}
+		if(a.equals(c)) {
+			System.out.println("a is equal to c");
+		}
+
+	}
+
+}
+```
+```java
+
+package TheHuman;
+
+class Rect {
+	int width;
+	int height;
+	
+	public Rect(int width, int height) {
+		this.width = width;
+		this.height = height;
+	}
+	
+	public boolean equals(Object obj) {
+		Rect p = (Rect)obj;
+		
+		if(width * height == p.width * p.height) {
+			return true;
+		
+		} else {
+			return false;
+		}
+	}
+}
+
+public class RectEqualsEx {
+
+	public static void main(String[] args) {
+		
+		Rect a = new Rect(2,3);
+		Rect b = new Rect(3,2);
+		Rect c = new Rect(3,4);
+		
+		if(a.equals(b)) {
+			System.out.println("a is equal to b");
+		}
+		if(a.equals(c)) {
+			System.out.println("a is equal to c");
+		}
+		if(b.equals(c)) {
+			System.out.println("b is equal to c");
+		}
+	}
+
+}
+
+```
+
+
 
 
 ## 연습문제
