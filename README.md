@@ -36,6 +36,7 @@
 - [StringBuilder와 StringBuffer 클래스](#StringBuilder와-StringBuffer-클래스)
 - [콘솔 출력](#콘솔-출력)
 - [Object 클래스](#Object-클래스)
+- [Wrapper 클래스](#Wrapper-클래스)
 - [연습문제](#연습문제)
 - [예외처리](#예외처리)
 
@@ -2992,8 +2993,15 @@ public class RectEqualsEx {
 }
 
 ```
+[목차로](#목차)
 
+## Wrapper 클래스
 
+- byte,short,int,long,char,float,double,boolean ;
+- Byte,Short,integer,Long,Character,Float,Double,Boolean ;
+- Wrapper클래스는 기본 타입에 해당되는 값을 객체로 다룰 수 있게한다.
+
+[목차로](#목차)
 
 
 ## 연습문제
