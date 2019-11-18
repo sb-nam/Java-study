@@ -35,6 +35,7 @@
 - [String 클래스](#String-클래스)
 - [StringBuilder와 StringBuffer 클래스](#StringBuilder와-StringBuffer-클래스)
 - [콘솔 출력](#콘솔-출력)
+- [Object 클래스](#Object-클래스)
 - [연습문제](#연습문제)
 - [예외처리](#예외처리)
 
@@ -2835,6 +2836,39 @@ class StarPrint {
 
 [목차로](#목차)
 
+## Object 클래스
+
+```java
+package TheHuman;
+
+class Point {
+	int x, y;
+
+	public Point(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+}
+
+public class ObjectProperty {
+
+	public static void print(Object obj) {
+		System.out.println(obj.getClass().getName());
+		System.out.println(obj.hashCode());
+		System.out.println(obj.toString());
+		System.out.println(obj);
+
+	}
+
+	public static void main(String[] args) {
+
+		Point p = new Point(2, 3);
+		print(p);
+	}
+
+}
+
+```
 
 ## 연습문제
 
