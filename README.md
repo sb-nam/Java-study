@@ -264,6 +264,7 @@ class GradeCard {
 - `<=` n1이 n2보다 같거나 작은가? 참이면 true, 거짓이면 false (n1 <= n2)
 - `>=` n1이 n2보다 같거나 큰가? 참이면 true, 거짓이면 false (n1 >= n2)
 - `==` n1과 n2가 같은가? 참이면 true, 거짓이면 false (n1 == n2)
+- `==` ==은 래퍼런스값 을 비교한다.
 - `!=` n1과 n2가 다른가? 참이면 true, 거짓이면 false (n1 != n2)
 
 [목차로](#목차)
@@ -2869,6 +2870,8 @@ public class ObjectProperty {
 }
 
 ```
+
+
 
 ## 연습문제
 
