@@ -2782,10 +2782,12 @@ class Student {
 
 
 ## StringBuilder와 StringBuffer 클래스
-- StringBilder는 문자열의 저장 및 변경을 위한 메모리 공간을 지니는 클래스
-- 문자열 데이터의 추가를 위한 append와 삽입을 위한 insert 메소드 제공
-- 추가되는 데이터 크기에 따라서 버퍼의 크기가 자동으로 확장된다.
+
+- StringBuffer는 문자열 데이터의 추가를 위한 append와 삽입을 위한 insert 메소드를 통해 스트링 조작.
+- StringBuffer는 String 클래스와는 달리 저장된 데이터 변경이 가능하다.
+- StringBuffer는 추가되는 데이터 크기에 따라서 버퍼의 크기가 자동으로 확장된다.
 - 생성자를 통해서 초기 버퍼의 크기를 지정할 수 있다.
+- StringBilder는 문자열의 저장 및 변경을 위한 메모리 공간을 지니는 클래스
 - 문자열의 복잡한 조합의 과정에서는 StringBuilder의 인스턴스가 활용된다.
 - 때문에 추가로 생성되는 인스턴스의 수는 최대 두 개 이다.
 
