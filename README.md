@@ -5814,6 +5814,38 @@ public class CalenderEx {
 }
 ```
 
+// Calendar 객체를 생성하면 현재 시간을 알 수 있다. 현재 시간과 그 시간에 맞는
+// Good morning,Good Afternoon,Good Evening,Good Night를 출력하라.
+
+package TheHuman;
+
+import java.util.Calendar;
+
+public class CalendarEX {
+
+	public static void main(String[] args) {
+
+		Calendar now = Calendar.getInstance();
+
+		int hour = now.get(Calendar.HOUR_OF_DAY);
+		int minute = now.get(Calendar.MINUTE);
+
+		System.out.print("현재 시간은 " + hour + "시 " + minute + "분 입니다. \n");
+
+		if (hour >= 4 && hour < 12) {
+			System.out.println("Good Morning");
+		} else if (hour >= 12 && hour < 18) {
+			System.out.println("Good Afternoon");
+		} else if (hour >= 18 && hour < 22) {
+			System.out.println("Good Evening");
+		} else {
+			System.out.println("Good Night");
+		}
+
+	}
+}
+
+
 
 
 
