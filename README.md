@@ -6036,7 +6036,7 @@ public class IteratorEx {
 		
 		// Iterator를 이용하여 모든 정수 더하기.
 		int sum = 0;
-		it = v.iterator(); //it 재설정
+		it = v.iterator(); //it 처음부터 다시 실행 하기 위해 재설정
 		while(it.hasNext()) {
 			int n = it.next();
 			sum += n;
