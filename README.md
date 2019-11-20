@@ -5921,6 +5921,93 @@ public class VectorEx {
 }
 ```
 
+```java
+
+package TheHumana;
+
+import java.util.Vector;
+
+class Point {
+	private int x, y;
+	
+	public Point(int x, int y ) {
+		this.x = x;
+		this.y = y;
+	}
+	
+	public String toString() {
+		return "(" + x + "," + y + ")";
+	}
+}
+
+public class PointVectorEx {
+
+	public static void main(String[] args) {
+		
+		Vector<Point> v = new Vector<Point>(); // Point 객체를 요소로 다루는 벡터 생성.
+		
+		
+		//3개의 Point 객체 삽입.
+		v.add(new Point(2,3));
+		v.add(new Point(-5,20));
+		v.add(new Point(30,-8));
+		
+		v.remove(1); // 인덱스 1의 Point(-5,20) 삭제.
+		
+		//벡터에 있는 Point 객체 모두 검색하여 출력
+		for(int i = 0; i < v.size(); i++) {
+			Point p = v.get(i); // 벡터의 i 번째 Point 객체 얻어내기.
+			System.out.println(p); // P.toString()을 이용하여 객체p 출력.
+		}
+
+	}
+
+}
+
+```
+
+```java
+
+package TheHumana;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ArrayListEX {
+
+	public static void main(String[] args) {
+		//문자열만 삽입 가능한 ArrayList 생성
+		ArrayList<String> a = new ArrayList<String>();
+		
+		//키보드로 부터 4개의 이름 입력받아 ArrayList에 삽입.
+		Scanner sc = new Scanner(System.in);
+		for(int i = 0; i < 4; i ++) {
+			System.out.print("이름을 입력하세요.");
+			String s = sc.next(); // 키보드로 부터 이름을 입력.
+			a.add(s); // ArrayList 컬렉션에 삽입.
+		}
+		
+		//ArrayList에 들어 있는 모든 이름 출력.
+		for(int i = 0; i < a.size(); i++) {
+			String name = a.get(i); // ArrayList i 번째 문자열 얻어오기.
+			System.out.print(name + " ");
+		}
+		
+		//가장 긴 이름 출력
+		int longestIndex = 0; // 현재 가장 긴 이름이 있는 ArrrayList 내의 인덱스
+		for(int i = 1; i < a.size(); i ++) {
+			if(a.get(longestIndex).length() < a.get(i).length()) {
+				longestIndex = i; // i 번째 이름이 더 긴 이름임.
+			}
+		}
+		System.out.println("\n가장 긴 이름은 : " + a.get(longestIndex));
+		sc.close();
+
+	}
+
+}
+
+```
 
 
 
