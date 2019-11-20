@@ -5814,6 +5814,8 @@ public class CalenderEx {
 }
 ```
 
+```java
+
 // Calendar 객체를 생성하면 현재 시간을 알 수 있다. 현재 시간과 그 시간에 맞는
 // Good morning,Good Afternoon,Good Evening,Good Night를 출력하라.
 
@@ -5845,7 +5847,40 @@ public class CalendarEX {
 	}
 }
 
+```
 
+```java
+
+package Exercise;
+
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+public class Exercise6_7 {
+
+	public static void main(String[] args) {
+	
+		Scanner sc = new Scanner(System.in);
+		
+		while(true) {
+		
+			System.out.print(">>>");
+			String word = sc.nextLine();
+			 
+			if(word.equals("그만")) {
+				System.out.println("종료합니다.");
+				break;
+			}
+			StringTokenizer st = new StringTokenizer(word, " ");
+			System.out.println("어절 개수는 " + st.countTokens());
+		}
+		sc.close();
+
+	}
+
+}
+
+```
 
 
 
