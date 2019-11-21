@@ -6085,6 +6085,100 @@ public class HashMapScoreEx {
 
 ```
 
+```java
+
+package TheHumana;
+
+import java.util.Collections;
+import java.util.LinkedList;
+
+public class LinkedListEx {
+
+	public static void main(String[] args) {
+		
+		LinkedList<String> student = new LinkedList<String>();
+		
+		String name [] = new String [] {"가","나","다","라","마","바","사","아",
+				"자","차","카","타","파","하","ㄷ부ㅑㄷ","ㄹㅇㅊ","ㅠㅅㄱ","ㅂㅈㄷ","ㅇ,ㅣ","ㅇㄴㄻㄴ",}; 
+		
+	    for(int i = 0; i < name.length; i ++) {
+	        student.add(name[i] + "->");
+
+	    	System.out.print(student.get(i));
+	    }
+	    System.out.println();
+	    Collections.reverse(student);
+	    for(int i = 0; i < name.length; i++) {
+	    	
+	    	System.out.print(student.get(i));
+	    }
+
+	}
+
+}
+
+```
+```java
+
+package TheHumana;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class HashMapEX {
+
+	public static void main(String[] args) {
+		
+		HashMap<String, String> dic = new HashMap<String, String>();
+		
+		dic.put("남설빈", "자바잡아");
+		dic.put("김현민", "자바잡아");
+		dic.put("이창혁", "자바잡아");
+		dic.put("오진수", "자바잡아");
+		
+		dic.put("김용우", "더휴먼 32사단");
+		dic.put("박상준", "더휴먼 32사단");
+		dic.put("주민웅", "더휴먼 32사단");
+		dic.put("신민철", "더휴먼 32사단");
+		
+		dic.put("강지선", "한나라 둘지선");
+		dic.put("송나라", "한나라 둘지선");
+		dic.put("심지선", "한나라 둘지선");
+		
+		dic.put("김형근", "우리의 서울");
+		dic.put("장현욱", "우리의 서울");
+		dic.put("오세훈", "우리의 서울");
+		
+		dic.put("유영빈", "공격팀");
+		dic.put("손영욱", "공격팀");
+		dic.put("한충구", "공격팀");
+		
+		Scanner sc = new Scanner(System.in);
+		
+		while(true) {
+			System.out.print("찾고 싶은 사람은?");
+			String name = sc.next();
+			
+			if(name.equals("그만")) {
+				System.out.println("프로그램 종료.");
+				break;
+			}
+			
+			String team = dic.get(name);
+			if(team == null) {
+				System.out.println(name + " 은 없는 이름 입니다.");
+				
+			} else {
+				System.out.println(team);
+			}
+		}
+		
+		sc.close();
+
+	}
+
+}
+```
 
 
 [목차로](#목차)
