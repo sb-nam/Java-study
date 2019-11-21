@@ -6180,6 +6180,71 @@ public class HashMapEX {
 }
 ```
 
+```java
+
+package TheHumana;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+class Students {
+
+	String name;
+	String team;
+
+	Students(String team, String name) {
+		this.name = name;
+		this.team = team;
+	}
+
+	String getName() {
+		return name;
+	}
+
+	String getTeam() {
+		return team;
+	}
+}
+
+public class HashMapCallTeam {
+
+	public static void main(String[] args) {
+
+		HashMap<String, Students> callTeam = new HashMap<String, Students>();
+
+		callTeam.put("자바잡아", new Students("자바잡아","남설빈, 김현민, 이창혁, 오진수"));
+		callTeam.put("한나라두지선", new Students("한나라두지선","강지선, 송나라, 심지선"));
+		callTeam.put("우리의서울", new Students("우리의서울","오세훈, 김형근, 장현욱"));
+		callTeam.put("상부상조", new Students("상부상조","공은경, 이미령, 장소미"));
+		callTeam.put("공격팀", new Students("공격팀","유영빈, 손영욱, 한충구"));
+		callTeam.put("더휴먼32사단", new Students("더휴먼32사단","박상준, 김용우, 신민철, 주민웅"));
+		
+		Scanner sc = new Scanner(System.in);
+		
+		while(true) {
+			System.out.print("검색 할 팀 이름>>");
+			String team = sc.nextLine();
+			
+			if(team.equals("그만")) {
+				System.out.println("프로그램 종료");
+				break;
+			}
+			
+	        Students students = callTeam.get(team);
+	        
+	        if(students == null) {
+	        	System.out.println(team + "은 없는 팀 입니다.");
+	        
+	        } else {
+	        	System.out.println("팀명 : " + students.getTeam() + "팀원 : " + students.getName());
+	        }
+		}
+		sc.close();
+	}
+}
+
+```
+
 
 [목차로](#목차)
 
