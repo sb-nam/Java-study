@@ -6245,6 +6245,47 @@ public class HashMapCallTeam {
 
 ```
 
+```java
+
+package Exercise;
+
+import java.util.Scanner;
+import java.util.Vector;
+
+public class Exercise7_4 {
+
+	public static void main(String[] args) {
+		
+		Vector<Integer> v = new Vector<Integer>();
+		
+		Scanner sc = new Scanner(System.in);
+		
+		while(true) {
+			System.out.print("강수량 입력(0 입력시 종료)>>>");
+			int precipitation = sc.nextInt();
+			int aver = 0;
+			int sum = 0;
+			v.add(precipitation);
+			
+			if(precipitation == 0) {
+				System.out.println("프로그램 종료");
+				break;
+			}
+			
+			for(int i = 0; i < v.size(); i ++) {
+				sum += v.get(i);
+				System.out.print(v.get(i)+ " ");
+			}
+			aver = sum / v.size();
+			System.out.println("\n현재 평균 " + aver);
+		}
+
+	}
+
+}
+
+```
+
 
 [목차로](#목차)
 
