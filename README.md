@@ -6534,3 +6534,57 @@ public class ArrayException {
 ```
 
 [목차로](#목차)
+
+## Thread
+
+```java
+
+package exexex;
+
+class RunnableSample implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+		try {
+			Thread.sleep(50);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("this is RunnableSample's run() method.");
+	}
+	
+}
+
+class ThreadSample extends Thread {
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		System.out.println("this is ThreadSample's run() method.");
+	}
+}
+
+public class RunThreads {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		RunThreads threads = new RunThreads();
+		threads.runBasic();
+		System.out.println("main() method is ended.");
+
+	}
+	
+	public void runBasic() {
+		RunnableSample runnable = new RunnableSample();
+		new Thread(runnable).start();
+		
+		ThreadSample thread = new ThreadSample();
+		thread.start();
+		System.out.println("RunThreads.runBasic() method is ended.");
+	}
+
+}
+```
