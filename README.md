@@ -6541,6 +6541,63 @@ public class ArrayException {
 
 package exexex;
 
+public class Fffffffffffffffffffffffffffffffff {
+
+	static int num = 0;
+	static int num2 = 0;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("-");
+		new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				for(int i=0; i<10; i++) {
+					num++;
+					System.out.println(num+" x");
+					try {
+						Thread.sleep(50);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+			}
+		}).start();
+		System.out.println("--");
+		
+		
+		new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				for(int i=0; i<10; i++) {
+					num2++;
+					System.out.println(num2+" y");
+					try {
+						Thread.sleep(50);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+			}
+		}).start();
+		
+		System.out.println("---");
+
+	}
+
+}
+```
+
+
+```java
+
+package exexex;
+
 class RunnableSample implements Runnable {
 
 	@Override
