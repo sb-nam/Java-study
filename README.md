@@ -6659,8 +6659,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 class Run extends JFrame implements Runnable {
-	private static int x = ((int) (Math.random() * 300));
-	private static int y = ((int) (Math.random() * 300));
+	private int x = ((int) (Math.random() * 300));
+	private int y = ((int) (Math.random() * 300));
 	private MyPanel panel = new MyPanel();
 	
 	public Run returnObject() {
