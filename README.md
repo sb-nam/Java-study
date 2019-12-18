@@ -6645,3 +6645,86 @@ public class RunThreads {
 
 }
 ```
+
+```java
+
+package Exercise;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+class Run extends JFrame implements Runnable {
+	private static int x = ((int) (Math.random() * 300));
+	private static int y = ((int) (Math.random() * 300));
+	private MyPanel panel = new MyPanel();
+	
+	public Run returnObject() {
+		return this;
+	}
+
+	Run() {
+		setTitle("원을 0.5초 간격으로 재생성");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		setContentPane(panel);
+		addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+				// TODO Auto-generated method stub
+				new Thread(returnObject()).start();
+				
+			}
+		});
+		setSize(350, 350);
+		setVisible(true);
+
+	}
+
+	class MyPanel extends JPanel {
+
+		@Override
+		protected void paintComponent(Graphics g) {
+			// TODO Auto-generated method stub
+
+			g.setColor(Color.GREEN);
+			g.drawOval(x, y, 50, 50);
+
+		}
+
+	}
+
+	@Override
+	public  void run() {
+		// TODO Auto-generated method stub
+		while (true) {
+			try {
+				Thread.sleep(400);
+				
+				x = ((int) (Math.random() * 300));
+				y = ((int) (Math.random() * 300));
+				panel.getParent().repaint();
+				
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+	}
+}
+
+public class Exercise13_2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		new Run();
+	}
+}
+
+```
